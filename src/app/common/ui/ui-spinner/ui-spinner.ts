@@ -1,0 +1,11 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-ui-spinner',
+  imports: [],
+  templateUrl: './ui-spinner.html',
+  styleUrl: './ui-spinner.scss',
+})
+export class UiSpinner {
+
+}
