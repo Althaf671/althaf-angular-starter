@@ -1,113 +1,164 @@
 <aside [class.open]="sidebar.isOpen()" id="nav">
 
-    <ul>
-        <li class="logo-container">
-            <span class="logo">Angular Starter</span>
-            <button (click)="toggle()" id="toggle-btn">
-                <app-ui-icons 
-                    [icon]="MenuIcons"
-                    color="black"
-                    [size]="23"
-                    [strokeW]="1.5"
-                />
-            </button>
-        </li>
-    </ul>
 
-    <!-- Main navigation -->
-    <span class="section-title">Overview</span>
-    <ul>
-        <li>
-            <a routerLink="/dashboard/administration/home">
-                <app-ui-icons 
-                    [icon]="DashboardIcon" [color]="'black'" [size]="23" [strokeW]="1.5" 
-                />
-                <span>Dashboard</span>
-            </a>
-        </li>
-        <li>
-            <a routerLink="/dashboard/administration/finance">
-                <app-ui-icons 
-                    [icon]="FinanceIcon" [color]="'black'" [size]="23" [strokeW]="1.5" 
-                />
-                <span>Finance</span>
-            </a>
-        </li>
-        <li>
-            <a routerLink="/dashboard/administration/finance">
-                <app-ui-icons 
-                    [icon]="TodoIcon" [color]="'black'" [size]="23" [strokeW]="1.5" 
-                />
-                <span>Todo-lists</span>
-            </a>
-        </li>
-        <li>
-            <a routerLink="/dashboard/administration/finance">
-                <app-ui-icons 
-                    [icon]="InboxIcon" [color]="'black'" [size]="23" [strokeW]="1.5" 
-                />
-                <span>Inbox</span>
-            </a>
-        </li>
-        <li>
-            <a routerLink="/dashboard/administration/finance">
-                <app-ui-icons 
-                    [icon]="EmployeeIcon" [color]="'black'" [size]="23" [strokeW]="1.5" 
-                />
-                <span>Employees</span>
-            </a>
-        </li>
-    </ul>
+    <!-- Naviagation container-->
+    <div class="navigation-container">
 
-    <!-- Secondary navigation-->
-    <span class="section-title">Utilities</span>
-    <ul>
-        <li>
-            <a routerLink="/dashboard/administration/health">
-                <app-ui-icons 
-                    [icon]="ToolsIcon" [color]="'black'" [size]="23" [strokeW]="1.5" 
+        <!-- Logo -->
+        <ul>
+            <li class="logo-container">
+                <img 
+                    src="/angular-logo.png" 
+                    alt="avatar"
                 />
-                <span>Tools</span>
-            </a>
-        </li>
-        <li>
-            <a routerLink="/dashboard/administration/setting">
-                <app-ui-icons 
-                    [icon]="FileManagerIcon" [color]="'black'" [size]="23" [strokeW]="1.5" 
-                />
-                <span>File Manager</span>
-            </a>
-        </li>
-    </ul>
+                <div class="user-info">
+                    <span class="logo">Administration</span>
+                    <p>admin@gmail.com</p>
+                </div>
+                <button (click)="toggle()" id="toggle-btn">
+                    <app-ui-icons 
+                        [icon]="MenuIcons"
+                        color="var(--color-icon)"
+                        [size]="23"
+                        [strokeW]="1.5"
+                    />
+                </button>
+            </li>
+        </ul>
 
-    <!-- Third navigation-->
-    <span class="section-title">Settings</span>
-    <ul>
-        <li>
-            <a routerLink="/dashboard/administration/health">
-                <app-ui-icons 
-                    [icon]="HealthIcon" [color]="'black'" [size]="23" [strokeW]="1.5" 
-                />
-                <span>Monitoring</span>
-            </a>
-        </li>
-        <li>
-            <a routerLink="/dashboard/administration/setting">
-                <app-ui-icons 
-                    [icon]="SettingIcon" [color]="'black'" [size]="23" [strokeW]="1.5" 
-                />
-                <span>Settings</span>
-            </a>
-        </li>
-        <li>
-            <a routerLink="/dashboard/administration/setting">
-                <app-ui-icons 
-                    [icon]="LogoutIcon" [color]="'black'" [size]="23" [strokeW]="1.5" 
-                />
-                <span>Logout</span>
-            </a>
-        </li>
-    </ul>
+        <!-- Primary navigation -->
+        <ul>
+            <li>
+                <a 
+                    routerLink="/dashboard/administration/home"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                    aria-labelledby=""
+                >
+                    <app-ui-icons 
+                        [icon]="DashboardIcon" [color]="'var(--color-icon)'" [size]="23" [strokeW]="1.5" 
+                    />
+                    <span id="">Overview</span>
+                </a>
+            </li>
+            <li>
+                <a 
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                    routerLink="/dashboard/administration/finance"
+                >
+                    <app-ui-icons 
+                        [icon]="FinanceIcon" [color]="'var(--color-icon)'" [size]="23" [strokeW]="1.5" 
+                    />
+                    <span>Finance</span>
+                </a>
+            </li>
+            <li>
+                <a 
+                    routerLink="/dashboard/administration/finance"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                >
+                    <app-ui-icons 
+                        [icon]="TodoIcon" [color]="'var(--color-icon)'" [size]="23" [strokeW]="1.5" 
+                    />
+                    <span>Todo-lists</span>
+                </a>
+            </li>
+            <li>
+                <a 
+                    routerLink="/dashboard/administration/finance"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                >
+                    <app-ui-icons 
+                        [icon]="InboxIcon" [color]="'var(--color-icon)'" [size]="23" [strokeW]="1.5" 
+                    />
+                    <span>Inbox</span>
+                </a>
+            </li>
+            <li>
+                <a 
+                    routerLink="/dashboard/administration/finance"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                >
+                    <app-ui-icons 
+                        [icon]="EmployeeIcon" [color]="'var(--color-icon)'" [size]="23" [strokeW]="1.5" 
+                    />
+                    <span>Employees</span>
+                </a>
+            </li>
+        </ul>
+
+        <!-- Secondary navigation-->
+        <span class="section-title">Utilities</span>
+        <ul>
+            <li>
+                <a 
+                    routerLink="/dashboard/administration/health"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }"                   
+                >
+                    <app-ui-icons 
+                        [icon]="ToolsIcon" [color]="'var(--color-icon)'" [size]="23" [strokeW]="1.5" 
+                    />
+                    <span>Tools</span>
+                </a>
+            </li>
+            <li>
+                <a 
+                    routerLink="/dashboard/administration/setting"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                >
+                    <app-ui-icons 
+                        [icon]="FileManagerIcon" [color]="'var(--color-icon)'" [size]="23" [strokeW]="1.5" 
+                    />
+                    <span>File Manager</span>
+                </a>
+            </li>
+        </ul>
+
+        <!-- Third navigation-->
+        <span class="section-title">Settings</span>
+        <ul>
+            <li>
+                <a 
+                    routerLink="/dashboard/administration/health"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                >
+                    <app-ui-icons 
+                        [icon]="HealthIcon" [color]="'var(--color-icon)'" [size]="23" [strokeW]="1.5" 
+                    />
+                    <span>Monitoring</span>
+                </a>
+            </li>
+            <li>
+                <a 
+                    routerLink="/dashboard/administration/setting"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                >
+                    <app-ui-icons 
+                        [icon]="SettingIcon" [color]="'var(--color-icon)'" [size]="23" [strokeW]="1.5" 
+                    />
+                    <span>Settings</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Logout container -->
+    <div class="logout-container">
+        <a routerLink="/dashboard/administration/setting">
+            <app-ui-icons 
+                [icon]="LogoutIcon" [color]="'var(--color-sidebar)'" [size]="23" [strokeW]="1.5" 
+            />
+            <span>Logout</span>
+        </a>
+    </div>
 
     <!-- Overlay for mobile -->
     <div class="overlay" [class.open]="!sidebar.isOpen()"></div>

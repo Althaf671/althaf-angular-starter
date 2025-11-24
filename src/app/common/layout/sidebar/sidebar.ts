@@ -13,12 +13,12 @@ import {
   SquareActivity, 
   ToolCase
 } from 'lucide-angular';
-import { RouterLink } from "@angular/router";
+import { RouterLink, RouterLinkActive } from "@angular/router";
 import { SidebarService } from '../../service/sidebar.service';
 
 @Component({
   selector: 'app-sidebar',
-  imports: [UiIcons, RouterLink],
+  imports: [UiIcons, RouterLink, RouterLinkActive],
   templateUrl: './sidebar.html',
   styleUrl: './sidebar.scss',
 })

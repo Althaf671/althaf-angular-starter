@@ -3,9 +3,10 @@
 }
 
 %font-h2 {
-    font-size: clamp(1.8rem, calc(2vw + 0.4rem), 2.4rem);
+    font-size: clamp(1.4rem, calc(1.75vw + 0.3rem), 1.75rem);
+    font-weight: 500;
 }
 
 %font-p {
-    font-size: clamp(1.2rem, calc(1.5vw + 0.2rem), 1.6rem);
+    font-size: clamp(1.2rem, calc(1.25vw + 0.2rem), 1.2rem);
 }

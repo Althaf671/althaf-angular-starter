@@ -1,5 +1,7 @@
 <main class="home__page">
 
+    <!-- Need that fullscreen feature -->
+
     <!-- Sidebar -->
     <app-sidebar />
 
@@ -7,27 +9,115 @@
     <div class="home-content">
 
         <!-- Header -->
-        <div class="header" style="grid-area: header;">
-            <h2>Dashboard Home</h2>
+        <div role="banner" class="header">
+            <div class="page-title">
+                <h2>Overview</h2>
+            </div>
+            <div role="group" class="button-group">
+                <button>
+                    <app-ui-icons [icon]="NotificationIcon" [color]="'var(--color-icon)'" [size]="23" [strokeW]="1.5"></app-ui-icons>
+                </button>
+                <button (click)="toggleDropdown()">
+                    <img src="/clorinde.webp" alt="avatar" />
+                </button>
+
+                <!-- Dropdown -->
+                @if (isOpen()) {
+                    <div class="dropdown">
+                        <ul>
+                            <li>
+                                <a 
+                                    routerLink="/dashboard/administration/home"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: true }"
+                                    aria-labelledby=""
+                                >
+                                    <app-ui-icons 
+                                        [icon]="ProfileIcon" [color]="'var(--color-icon)'" [size]="21" [strokeW]="1.5" 
+                                    />
+                                    <span id="">Profile</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a 
+                                    routerLink="/dashboard/administration/home"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: true }"
+                                    aria-labelledby=""
+                                >
+                                    <app-ui-icons 
+                                        [icon]="SearchbarIcon" [color]="'var(--color-icon)'" [size]="21" [strokeW]="1.5" 
+                                    />
+                                    <span id="">Search</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a 
+                                    routerLink="/dashboard/administration/home"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: true }"
+                                    aria-labelledby=""
+                                >
+                                    <app-ui-icons 
+                                        [icon]="FullscreenIcon" [color]="'var(--color-icon)'" [size]="21" [strokeW]="1.5" 
+                                    />
+                                    <span id="">Fullscreen</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a 
+                                    routerLink="/dashboard/administration/home"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: true }"
+                                    aria-labelledby=""
+                                >
+                                    <app-ui-icons 
+                                        [icon]="LanguageIcon" [color]="'var(--color-icon)'" [size]="21" [strokeW]="1.5" 
+                                    />
+                                    <span id="">Language</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a 
+                                    routerLink="/dashboard/administration/home"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: true }"
+                                    aria-labelledby=""
+                                >
+                                    <app-ui-icons 
+                                        [icon]="ToggleIcon" [color]="'var(--color-icon)'" [size]="21" [strokeW]="1.5" 
+                                    />
+                                    <span id="">Theme</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                }
+            </div>
         </div>
 
-        <!-- Metric panel -->
-        <div class="metric-panel" style="grid-area: metric-panel;">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nesciunt, et dolorem tenetur rem doloribus veritatis adipisci voluptatibus? Consequuntur facere debitis voluptas suscipit velit autem distinctio nesciunt quisquam vero omnis!</p>
-        </div>
+        <!-- Grid container -->
+        <div role="grid" class="grid-container">
 
-        <!-- Bar Chart -->
-        <div class="bar-chart-container" style="grid-area: bar-chart;">
-            <p>Bar Chart</p>
-        </div>
+            <!-- Metric panel -->
+            <div class="metric-panel" style="grid-area: metric-panel;">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nesciunt, et dolorem tenetur rem doloribus veritatis adipisci voluptatibus? Consequuntur facere debitis voluptas suscipit velit autem distinctio nesciunt quisquam vero omnis!</p>
+            </div>
 
-        <!-- Todo list -->
-        <div class="todo-list-container" style="grid-area: todo;">
-            <p>Todo List</p>
+            <!-- Bar Chart -->
+            <div class="bar-chart-container" style="grid-area: bar-chart;">
+                <p>Bar Chart</p>
+            </div>
+
+            <!-- Todo list -->
+            <div class="todo-list-container" style="grid-area: todo;">
+                <p>Todo List</p>
+            </div>
+
         </div>
 
         <!-- Footer -->
-        <div class="footer" style="grid-area: footer;">
+        <div class="footer">
             <p>Footer</p>
         </div>
 
