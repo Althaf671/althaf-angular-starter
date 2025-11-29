@@ -1,1 +1,32 @@
-<p>ui-menu works!</p>
+<div class="toggle">
+    <button type="button" (click)="toggleMenu()">
+        <img src="/clorinde.webp" alt="avatar" />
+    </button>
+</div>
+
+@if (isOpen()) {
+    <div 
+        [class.open]="isOpen()"
+        class="dropdown-menu"
+    >
+        @for (item of menuItems; track $index) {
+            <ul>
+                <li>
+                    <a 
+                        [routerLink]="item.route" 
+                        routerLinkActive="active" 
+                        [routerLinkActiveOptions]="{ exact: true }"
+                    >
+                        <app-ui-icons 
+                            [icon]="item.icon.icon" 
+                            [size]="item.icon.size"
+                            [strokeW]="item.icon.strokeW"
+                            [color]="item.icon.color"
+                        />
+                        <span>{{ item.text }}</span>
+                    </a>
+                </li>
+            </ul>
+        }
+    </div>
+}

@@ -14,7 +14,7 @@ import {
   ToolCase
 } from 'lucide-angular';
 import { RouterLink, RouterLinkActive } from "@angular/router";
-import { SidebarService } from '../../service/sidebar.service';
+import { SidebarService } from '../../service/layout/sidebar.service';
 
 @Component({
   selector: 'app-sidebar',

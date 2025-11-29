@@ -38,63 +38,20 @@ main {
             letter-spacing: 0.25px;
 
             .button-group {
+                position: relative;
                 display: flex;
                 gap: 0.5rem;
                 width: fit-content;
                 padding: .25em;
 
-                .dropdown {
-                    position: absolute;
-                    top: 4em;
-                    right: 1em;
-                    min-width: 180px;
-                    min-height: 150px;
-                    background-color: var(--color-sidebar);
-                    border: 1px solid var(--color-border);
-                    transition: 300ms ease-in-out;
-                    border-radius: 8px;
-                    padding: .75em;
-                    z-index: 888;
-
-                    li {
-                        list-style: none;
-                        padding: .35em .45em;
-                        margin-bottom: .1em;
-                        transition: 300ms ease-in-out;
-                        border-radius: 7px;
-                        user-select: none;
-                        cursor: pointer;
-
-                        &:hover, &active {
-                            background-color: var(--color-secondary);
-                        }
-                    }
-
-                    a {
-                        display: flex;
-                        align-items: center;
-                        gap: .45em;
-                    }
-                }
-
                 button {
+                    position: relative;
                     background: none;
                     border: none;
                     padding: .5em;
                     border-radius: 50%;
                     width: 39px;
                     height: 39px;
-                }
-
-                button:nth-child(2) {
-                    padding: 0;
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        border-radius: 50%;
-                        border: 2px solid var(--color-border);
-                    }
                 }
             }
         }
