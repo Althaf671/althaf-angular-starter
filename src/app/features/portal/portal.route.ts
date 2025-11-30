@@ -25,4 +25,5 @@ export const portalRoutes: Routes = [
         path: 'support',
         loadChildren: () => import('./support/support.route').then(r => r.supportRoutes)
     },
+    { path: '', redirectTo: '/portal/administration/home', pathMatch: 'full' },
 ]

@@ -3,7 +3,7 @@ import { Routes } from "@angular/router";
 export const adminSupportRoutes: Routes = [
     {
         path: 'home',
-        loadChildren: () => import('./pages/home/home').then(c => c.Home)
+        loadComponent: () => import('./pages/home/home').then(c => c.Home)
     },
     // **
 ]
