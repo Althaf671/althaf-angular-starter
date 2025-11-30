@@ -1,0 +1,21 @@
+<nav class="breadcrumbs">
+    <ol>
+        @for (item of breadcrumbItems; track $index) {
+            <li>
+                @if (!lastItems($index, breadcrumbItems))  {
+                    <a [routerLink]="item.route">
+                        <span>{{ item.label }}</span>
+                        <app-ui-icons 
+                            [color]="'var(--color-icon)'"
+                            [size]="21"
+                            [strokeW]="1.5"
+                            [icon]="ChevronRight"
+                        />
+                    </a>
+                } @else {
+                    <span>{{ item.label }}</span>
+                } 
+            </li>
+        }
+    </ol>
+</nav>

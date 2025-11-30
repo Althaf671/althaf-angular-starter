@@ -1,6 +1,6 @@
 import { UiIcons } from "../ui-icons/ui-icons";
 
-export type TMenuConfig = {
+export type TMenuItemsConfig = {
     route?: string;
     icon: any;
     text: string;

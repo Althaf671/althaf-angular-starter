@@ -1,0 +1,22 @@
+@use '../../styles/utilities/index' as *;
+@use '../../styles/variables/index' as *;
+
+.breadcrumbs {
+    display: flex;
+    width: fit-content;
+
+    li {
+        list-style: none;
+        color: var(--color-text);
+        opacity: 60%;
+    }
+
+    a {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    span {
+        cursor: default;
+    }
+}

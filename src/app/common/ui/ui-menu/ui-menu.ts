@@ -1,6 +1,5 @@
 import { Component, ElementRef, HostListener, Input, signal } from '@angular/core';
-import { UiIcons } from "../ui-icons/ui-icons";
-import { TMenuConfig } from '../models/menu.model';
+import { TMenuItemsConfig, UiIcons } from '@/ui/index';
 import { RouterLink, RouterLinkActive } from "@angular/router";
 
 @Component({
@@ -20,7 +19,7 @@ export class UiMenu {
   }
 
   // Menu items
-  @Input() menuItems: TMenuConfig = [];
+  @Input() menuItems!: TMenuItemsConfig;
 
   // Handle outside click
   @HostListener('document:click', ['$event'])

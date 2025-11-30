@@ -3,7 +3,13 @@
     <!-- Need that fullscreen feature -->
 
     <!-- Sidebar -->
-    <app-sidebar />
+    <app-sidebar 
+        [portalName]="sidebarHeaderItems.portalName" 
+        [email]="sidebarHeaderItems.email" 
+        [primaryMenuItems]="sidebarPrimaryMenuItems"
+        [secondaryMenuItems]="sidebarSecondaryMenuItems"
+        [thirdMenuItems]="sidebarThirdMenuItems"
+    />
 
     <!-- Body -->
     <div class="home-content">
@@ -12,6 +18,7 @@
         <div role="banner" class="header">
             <div class="page-title">
                 <h2>Overview</h2>
+                <app-ui-breadcrumbs />
             </div>
             <div role="group" class="button-group">
                 <button>

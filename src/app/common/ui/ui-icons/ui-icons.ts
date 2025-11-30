@@ -16,4 +16,5 @@ export class UiIcons {
   @Input() strokeW!: number;
 
   @Input() size!: string | number;
+  
 }

@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { UiIcons } from "../../ui/ui-icons/ui-icons";
+import { Component, Input } from '@angular/core';
+import { UiIcons } from "@/ui/index";
 import { 
   AppWindow, 
   ContactRound, 
@@ -15,6 +15,7 @@ import {
 } from 'lucide-angular';
 import { RouterLink, RouterLinkActive } from "@angular/router";
 import { SidebarService } from '../../service/layout/sidebar.service';
+import { TSidebarMenuItemsConfig } from '@/layout/index';
 
 @Component({
   selector: 'app-sidebar',
@@ -43,5 +44,19 @@ export class Sidebar {
   toggle() {
     this.sidebar.toggle();
   }
+
+  // Sidebar header config
+  @Input() portalName!: string;
+
+  @Input() email!: string;
+
+  // Sidebar primary menu items
+  @Input() primaryMenuItems!: TSidebarMenuItemsConfig;
+
+  // Sidebar secondary menu items
+  @Input() secondaryMenuItems!: TSidebarMenuItemsConfig;
+
+  // Sidebar third menu items
+  @Input() thirdMenuItems!: TSidebarMenuItemsConfig;
   
 }
