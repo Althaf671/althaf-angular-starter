@@ -3,20 +3,38 @@
 
 .breadcrumbs {
     display: flex;
+    flex-direction: row;
     width: fit-content;
 
+    ol {
+        display: flex;
+        flex-direction: row;
+    }
+
     li {
+        display: flex;
+        flex-direction: row;
         list-style: none;
         color: var(--color-text);
         opacity: 60%;
-    }
+        width: fit-content;
 
-    a {
-        cursor: pointer;
-        text-decoration: underline;
-    }
+        a {
+            text-decoration: underline;
+            color: var(--color-text);
+            
+            span {
+                cursor: pointer;
+                font-weight: 600;
+            }
+        }
 
-    span {
-        cursor: default;
+        span {
+            cursor: default;
+        }
+
+        .icon {
+            margin-top: 0px;
+        }
     }
 }

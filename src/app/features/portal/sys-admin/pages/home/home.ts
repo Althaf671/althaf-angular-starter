@@ -9,12 +9,12 @@ import {
   SIDEBAR_SECONDARY_MENU_ITEMS, 
   SIDEBAR_THIRD_MENU_ITEMS
 } from '../../common/service/ui-config/sidebar.config';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 
 @Component({
   selector: 'app-home',
-  imports: [UiIcons, Sidebar, UiMenu, UiBreadcrumbs, RouterLink],
+  imports: [UiIcons, Sidebar, UiMenu, UiBreadcrumbs, RouterLink, RouterOutlet],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
