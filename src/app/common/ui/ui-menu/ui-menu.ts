@@ -11,17 +11,17 @@ import { RouterLink, RouterLinkActive } from "@angular/router";
 export class UiMenu {
   constructor (private elementRef: ElementRef) {};
 
-  // Toggle menu
-  isOpen = signal(false);
+  // ! Toggle menu
+  public isOpen = signal(false);
 
   toggleMenu() {
     this.isOpen.update((isOpen) => !isOpen);
   }
 
-  // Menu items
+  // ! Menu items
   @Input() menuItems!: TMenuItemsConfig;
 
-  // Handle outside click
+  // ! Handle outside click
   @HostListener('document:click', ['$event'])
   isClicked(event: Event) {
     if (this.isOpen() && !this.elementRef.nativeElement.contains(event.target)) {

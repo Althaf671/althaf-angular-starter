@@ -1,15 +1,14 @@
 import { RouterStateService } from '@/app/common/service/state/RouterStateService';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { RouterLink, RouterOutlet, RouterLinkWithHref } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-inner',
-  imports: [RouterOutlet, RouterLinkWithHref],
-  templateUrl: './inner.html',
-  styleUrl: './inner.scss',
+  selector: 'app-grand',
+  imports: [],
+  templateUrl: './grand.html',
+  styleUrl: './grand.scss',
 })
-export class Inner implements OnInit, OnDestroy {
+export class Grand implements OnInit, OnDestroy {
   constructor(private routerState: RouterStateService) {};
 
   //=== ! ===//
@@ -19,9 +18,9 @@ export class Inner implements OnInit, OnDestroy {
 
   // Initiate event
   ngOnInit(): void {
-    this.isChildPage = this.routerState.isCurrentRoute('/home/inner');
+    this.isChildPage = this.routerState.isCurrentRoute('/home/inner/grand');
     this.routeSubs = this.routerState.subscribeRoute(url => {
-      this.isChildPage = url.endsWith('/home/inner');
+      this.isChildPage = url.endsWith('/home/inner/grand');
     })
 
 
@@ -32,5 +31,4 @@ export class Inner implements OnInit, OnDestroy {
     this.routeSubs?.unsubscribe();
 
   }
-
 }

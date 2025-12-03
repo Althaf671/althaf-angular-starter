@@ -9,6 +9,7 @@
     ol {
         display: flex;
         flex-direction: row;
+        gap: .15em;
     }
 
     li {
@@ -20,17 +21,19 @@
         width: fit-content;
 
         a {
-            text-decoration: underline;
+            text-decoration: none;
             color: var(--color-text);
             
             span {
                 cursor: pointer;
-                font-weight: 600;
+                font-weight: 500;
+                opacity: 80%;
             }
         }
 
         span {
             cursor: default;
+            opacity: 100%;
         }
 
         .icon {

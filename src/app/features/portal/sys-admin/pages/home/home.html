@@ -4,15 +4,15 @@
 
     <!-- Sidebar -->
     <app-sidebar 
-        [portalName]="sidebarHeaderItems.portalName" 
-        [email]="sidebarHeaderItems.email" 
-        [primaryMenuItems]="sidebarPrimaryMenuItems"
-        [secondaryMenuItems]="sidebarSecondaryMenuItems"
-        [thirdMenuItems]="sidebarThirdMenuItems"
+        [portalName]="pageLayoutConfig.sidebarConfigs.headerItems.portalName" 
+        [email]="pageLayoutConfig.sidebarConfigs.headerItems.email" 
+        [primaryMenuItems]="pageLayoutConfig.sidebarConfigs.primaryItems"
+        [secondaryMenuItems]="pageLayoutConfig.sidebarConfigs.secondaryItems"
+        [thirdMenuItems]="pageLayoutConfig.sidebarConfigs.thirdItems"
     />
 
     <!-- Body -->
-    <div class="home-content">
+    <app-wrapper slot="body">
 
         <!-- Header -->
         <div role="banner" class="header">
@@ -22,38 +22,43 @@
             </div>
             <div role="group" class="button-group">
                 <button>
-                    <app-ui-icons [icon]="NotificationIcon" [color]="'var(--color-icon)'" [size]="23" [strokeW]="1.5"></app-ui-icons>
+                    <app-ui-icons [icon]="pageLayoutConfig.headerIcons.NotificationIcon" [color]="'var(--color-icon)'" [size]="23" [strokeW]="1.5"></app-ui-icons>
                 </button>
-                <app-ui-menu [menuItems]="menuItems" />
+                <app-ui-menu [menuItems]="pageLayoutConfig.menuConfig" />
             </div>
         </div>
 
         <!-- Grid container -->
-        <div role="grid" class="grid-container">
+        @if (isHomePage) {
+            <ng-container role="grid" class="grid-container">
 
-            <!-- Metric panel -->
-            <div class="metric-panel" style="grid-area: metric-panel;">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nesciunt, et dolorem tenetur rem doloribus veritatis adipisci voluptatibus? Consequuntur facere debitis voluptas suscipit velit autem distinctio nesciunt quisquam vero omnis!</p>
-            </div>
+                <!-- Metric panel -->
+                <div class="metric-panel" style="grid-area: metric-panel;">
+                   <a [routerLink]="'/portal/system-administrator/home'">Return</a>
+                   <a [routerLink]="'/portal/system-administrator/home/inner'">Child</a>
+                   <a [routerLink]="'/portal/system-administrator/home/inner/grand'">GrandChild</a>
+                </div>
 
-            <!-- Bar Chart -->
-            <div class="bar-chart-container" style="grid-area: bar-chart;">
-                <p>Bar Chart</p>
-            </div>
+                <!-- Bar Chart -->
+                <div class="bar-chart-container" style="grid-area: bar-chart;">
+                    <p>Bar Chart</p>
+                </div>
 
-            <!-- Todo list -->
-            <div class="todo-list-container" style="grid-area: todo;">
-                <p>Todo List</p>
-            </div>
+                <!-- Todo list -->
+                <div class="todo-list-container" style="grid-area: todo;">
+                    <p>Todo List</p>
+                </div>
 
-        </div>
+            </ng-container>
+        }
+
+        <router-outlet ></router-outlet>
 
         <!-- Footer -->
         <div class="footer">
             <p>Footer</p>
         </div>
 
-    </div>
-     <!-- <router-outlet></router-outlet> -->
+    </app-wrapper>
 
 </main>

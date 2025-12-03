@@ -17,13 +17,8 @@ main {
     display: grid;
     grid-template-columns: auto 1fr;
 
-    .home-content {
-        display: flex;
-        flex-direction: column;
-        min-width: 100%;
-        min-height: 100dvh;
-        background-color: var(--color-secondary);
-        padding: 0;
+
+
 
         .header {
             position: relative;
@@ -86,7 +81,7 @@ main {
                 border-radius: 8px;
             }
         }
-    }
+    
 }
 
 @media(max-width: 440px) {

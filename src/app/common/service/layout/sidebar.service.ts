@@ -5,7 +5,7 @@ import { Injectable, signal } from '@angular/core';
 })
 export class SidebarService {
     
-    isOpen = signal(true)
+    public isOpen = signal(true)
 
     toggle() {
         this.isOpen.update(v => !v)
