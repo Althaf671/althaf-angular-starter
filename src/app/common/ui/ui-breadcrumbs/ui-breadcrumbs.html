@@ -1,7 +1,9 @@
 <nav class="breadcrumbs">
     <ol>
-        @for (item of breadcrumbItems; track $index) {
-            @if (!lastItems($index, breadcrumbItems)) {
+        @for (item of breadcrumbItems; track $index) 
+        {
+            @if (!lastItems($index, breadcrumbItems)) 
+            {
                 <li>
                     <a [routerLink]="item.route">
                         <span class="prev-route">{{ item.label }}</span>
@@ -14,7 +16,9 @@
                         class="icon"
                     />
                 </li>
-            } @else {
+            } 
+            @else 
+            {
                 <li>
                      <span class="current-route">{{ item.label }}</span>
                 </li>

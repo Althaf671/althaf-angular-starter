@@ -2,11 +2,13 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UiSpinner } from './ui-spinner';
 
-describe('UiSpinner', () => {
+describe('UiSpinner', () => 
+{
   let component: UiSpinner;
   let fixture: ComponentFixture<UiSpinner>;
 
-  beforeEach(async () => {
+  beforeEach(async () => 
+  {
     await TestBed.configureTestingModule({
       imports: [UiSpinner]
     })
@@ -17,7 +19,8 @@ describe('UiSpinner', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create', () => 
+  {
     expect(component).toBeTruthy();
   });
 });

@@ -2,11 +2,13 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Wrapper } from './wrapper';
 
-describe('Wrapper', () => {
+describe('Wrapper', () => 
+{
   let component: Wrapper;
   let fixture: ComponentFixture<Wrapper>;
 
-  beforeEach(async () => {
+  beforeEach(async () => 
+  {
     await TestBed.configureTestingModule({
       imports: [Wrapper]
     })
@@ -17,7 +19,8 @@ describe('Wrapper', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create', () => 
+  {
     expect(component).toBeTruthy();
   });
 });

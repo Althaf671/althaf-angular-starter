@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './wrapper.html',
   styleUrl: './wrapper.scss',
 })
-export class Wrapper {
+export class Wrapper 
+{
 
 }

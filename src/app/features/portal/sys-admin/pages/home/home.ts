@@ -1,6 +1,6 @@
-import { Component, OnDestroy, OnInit, signal } from '@angular/core';
+import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { Bell } from 'lucide-angular';
-import { UiIcons, UiMenu, UiBreadcrumbs } from "@/ui/index";
+import { UiIcons, UiMenu, UiBreadcrumbs, UiModal, UiCard, IModalItemsConfig } from "@/ui/index";
 import { Sidebar } from "@/layout/sidebar/sidebar";
 import { MENU_CONFIG } from './common/ui-config/menu.config';
 import { 
@@ -9,7 +9,7 @@ import {
   SIDEBAR_SECONDARY_MENU_ITEMS, 
   SIDEBAR_THIRD_MENU_ITEMS
 } from '../../common/service/ui-config/sidebar.config';
-import { Router, RouterLink, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { Wrapper } from "@/app/common/layout/wrapper/wrapper";
 import { Subscription } from 'rxjs';
 import { RouterStateService } from '@/app/common/service/state/RouterStateService';
@@ -18,43 +18,55 @@ import { RouterStateService } from '@/app/common/service/state/RouterStateServic
 @Component({
   selector: 'app-home',
   imports: [
-    UiIcons, 
-    Sidebar, 
-    UiMenu, 
-    UiBreadcrumbs, 
-    RouterLink, 
-    RouterOutlet, 
-    Wrapper
-  ],
+    UiIcons,
+    Sidebar,
+    UiMenu,
+    UiBreadcrumbs,
+    RouterLink,
+    RouterOutlet,
+    Wrapper,
+    UiModal,
+    UiCard
+],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
-export class Home implements OnInit, OnDestroy {
-  constructor(private routerState: RouterStateService) {}; // Router DI
-  
+export class Home implements OnInit, OnDestroy 
+{
+  // Router DI
+  private routerState = inject(RouterStateService);
 
   //=== ! Header, Menu dropdown, sidebar config items ===//
   readonly pageLayoutConfig = {
     headerIcons: { NotificationIcon: Bell },
     menuConfig: MENU_CONFIG,
-    sidebarConfigs: {
+    sidebarConfigs: 
+    {
       headerItems: SIDEBAR_HEADER_ITEMS,
       primaryItems: SIDEBAR_PRIMARY_MENU_ITEMS,
       secondaryItems: SIDEBAR_SECONDARY_MENU_ITEMS,
       thirdItems: SIDEBAR_THIRD_MENU_ITEMS,
     }
-  } as const;
+  } as const
+
+  modalInfolItems: IModalItemsConfig = {
+    title: 'Information',
+    type: 'info',
+    description: "This is an Information modal.",
+  }
 
 
   //=== ! Control home content ===//
   // States
-  public isHomePage: boolean = false;
+  public isHomePage = false;
   private routeSubs?: Subscription;
 
   // Initiate event
-  ngOnInit(): void {
+  ngOnInit(): void 
+  {
     this.isHomePage = this.routerState.isCurrentRoute('/home');
-    this.routeSubs = this.routerState.subscribeRoute(url => {
+    this.routeSubs = this.routerState.subscribeRoute(url => 
+    {
       this.isHomePage = url.includes('/home');
     });
     console.log("isHomePage and routeSubs initiated"); // remove at prod
@@ -62,7 +74,8 @@ export class Home implements OnInit, OnDestroy {
   }
 
   // Destroy event
-  ngOnDestroy(): void {
+  ngOnDestroy(): void 
+  {
     this.routeSubs?.unsubscribe();
     console.log("routeSubs destroyed"); // remove at prod
   }

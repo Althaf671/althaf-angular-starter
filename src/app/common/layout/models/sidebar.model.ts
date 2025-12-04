@@ -1,7 +1,7 @@
-import { TIconItemsConfig } from "../../ui";
+import { IIconItemsConfig } from "../../ui";
 
 export type TSidebarMenuItemsConfig = {
     route: string;
-    icon: TIconItemsConfig;
+    icon: any;
     name: string;
 }[];

@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './ui-card.html',
   styleUrl: './ui-card.scss',
 })
-export class UiCard {
+export class UiCard 
+{
 
 }

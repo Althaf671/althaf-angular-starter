@@ -7,6 +7,7 @@ import { Sidebar } from "../../../../../common/layout/sidebar/sidebar";
   templateUrl: './finance.html',
   styleUrl: './finance.scss',
 })
-export class Finance {
+export class Finance 
+{
 
 }

@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { LucideAngularModule } from 'lucide-angular';
+import { LucideAngularModule, LucideIconData } from 'lucide-angular';
+import { IIconItemsConfig } from '../models/icon.model';
 
 @Component({
   selector: 'app-ui-icons',
@@ -7,7 +8,8 @@ import { LucideAngularModule } from 'lucide-angular';
   templateUrl: './ui-icons.html',
   styleUrl: './ui-icons.scss',
 })
-export class UiIcons {
+export class UiIcons 
+{
   
   @Input() icon!: any;
 

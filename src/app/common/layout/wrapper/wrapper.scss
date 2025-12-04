@@ -1,8 +1,11 @@
+@use '../../styles/utilities/index' as *;
+@use '../../styles//variables/color-admin' as *;
+
 .main-wrapper {
     display: flex;
     flex-direction: column;
     min-width: 100%;
     min-height: 100dvh;
-    background-color: white;
+    background-color: var(--color-secondary);
     padding: 0;
 }

@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './ui-accordion.html',
   styleUrl: './ui-accordion.scss',
 })
-export class UiAccordion {
+export class UiAccordion 
+{
 
 }

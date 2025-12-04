@@ -2,11 +2,13 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UiCard } from './ui-card';
 
-describe('UiCard', () => {
+describe('UiCard', () => 
+{
   let component: UiCard;
   let fixture: ComponentFixture<UiCard>;
 
-  beforeEach(async () => {
+  beforeEach(async () => 
+  {
     await TestBed.configureTestingModule({
       imports: [UiCard]
     })
@@ -17,7 +19,8 @@ describe('UiCard', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create', () => 
+  {
     expect(component).toBeTruthy();
   });
 });

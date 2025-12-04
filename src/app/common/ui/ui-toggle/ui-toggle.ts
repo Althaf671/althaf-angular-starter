@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './ui-toggle.html',
   styleUrl: './ui-toggle.scss',
 })
-export class UiToggle {
+export class UiToggle 
+{
 
 }

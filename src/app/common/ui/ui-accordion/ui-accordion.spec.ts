@@ -2,11 +2,13 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UiAccordion } from './ui-accordion';
 
-describe('UiAccordion', () => {
+describe('UiAccordion', () => 
+{
   let component: UiAccordion;
   let fixture: ComponentFixture<UiAccordion>;
 
-  beforeEach(async () => {
+  beforeEach(async () => 
+  {
     await TestBed.configureTestingModule({
       imports: [UiAccordion]
     })
@@ -17,7 +19,8 @@ describe('UiAccordion', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create', () => 
+  {
     expect(component).toBeTruthy();
   });
 });

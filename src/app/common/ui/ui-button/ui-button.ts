@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './ui-button.html',
   styleUrl: './ui-button.scss',
 })
-export class UiButton {
+export class UiButton 
+{
 
 }

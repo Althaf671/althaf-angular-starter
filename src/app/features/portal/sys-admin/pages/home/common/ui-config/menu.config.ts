@@ -4,7 +4,7 @@ export const MENU_CONFIG = [
   { 
     icon: { 
       icon: UserRound, 
-      strokeW: 1.5,
+      strokeWidth: 1.5,
       color: 'var(--color-icon)', 
       size: 21
     },
@@ -14,7 +14,7 @@ export const MENU_CONFIG = [
   { 
     icon: { 
       icon: Search, 
-      strokeW: 1.5,
+      strokeWidth: 1.5,
       color: 'var(--color-icon)', 
       size: 21
     },
@@ -24,7 +24,7 @@ export const MENU_CONFIG = [
   { 
     icon: { 
       icon: Expand, 
-      strokeW: 1.5,
+      strokeWidth: 1.5,
       color: 'var(--color-icon)', 
       size: 21
     },
@@ -34,7 +34,7 @@ export const MENU_CONFIG = [
   { 
     icon: { 
       icon: Languages, 
-      strokeW: 1.5,
+      strokeWidth: 1.5,
       color: 'var(--color-icon)', 
       size: 21
     },
@@ -44,7 +44,7 @@ export const MENU_CONFIG = [
   { 
     icon: { 
       icon: Moon, 
-      strokeW: 1.5,
+      strokeWidth: 1.5,
       color: 'var(--color-icon)', 
       size: 21
     },

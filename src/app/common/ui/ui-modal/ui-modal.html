@@ -1,1 +1,48 @@
-<p>ui-modal works!</p>
+@switch (modalConfig.type) {
+    @case ('info') {
+        <div class="modal-info">
+            <div class="inner-modal">
+                <div class="header">
+                    <app-ui-icons></app-ui-icons>
+                    <h3>{{ modalConfig.title }}</h3>
+                </div>
+                <div class="body">
+                    <p>{{ modalConfig.description }}</p>
+                </div>
+                <div class="footer">
+                    <div class="btn-container">
+                        <button>Close</button>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay"></div>
+        </div>
+    }
+    @case ('actions') {
+        <div 
+            class="modal"
+            [class]="'-' + modalConfig.type"
+        >
+            <div class="inner-modal">
+                <div class="header">
+                    <app-ui-icons></app-ui-icons>
+                    <h3>{{ modalConfig.title }}</h3>
+                </div>
+                <div class="body">
+                    {{ modalConfig.form }}
+                </div>
+                <div class="footer">
+                    <div class="btn-container">
+                        <button>Close</button>
+                        @switch (modalConfig.action) {
+                            @case ('submit') {}
+                            @case ('continue') {}
+                            @case ('delete') {}
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="overlay"></div>
+        </div>
+    }
+}

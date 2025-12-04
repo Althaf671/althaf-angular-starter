@@ -2,11 +2,13 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Navbar } from './navbar';
 
-describe('Navbar', () => {
+describe('Navbar', () => 
+{
   let component: Navbar;
   let fixture: ComponentFixture<Navbar>;
 
-  beforeEach(async () => {
+  beforeEach(async () => 
+  {
     await TestBed.configureTestingModule({
       imports: [Navbar]
     })
@@ -17,7 +19,8 @@ describe('Navbar', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create', () => 
+  {
     expect(component).toBeTruthy();
   });
 });

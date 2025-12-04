@@ -2,11 +2,13 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UiToggle } from './ui-toggle';
 
-describe('UiToggle', () => {
+describe('UiToggle', () => 
+{
   let component: UiToggle;
   let fixture: ComponentFixture<UiToggle>;
 
-  beforeEach(async () => {
+  beforeEach(async () => 
+  {
     await TestBed.configureTestingModule({
       imports: [UiToggle]
     })
@@ -17,7 +19,8 @@ describe('UiToggle', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create', () => 
+  {
     expect(component).toBeTruthy();
   });
 });

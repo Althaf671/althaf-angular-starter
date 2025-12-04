@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './ui-badge.html',
   styleUrl: './ui-badge.scss',
 })
-export class UiBadge {
+export class UiBadge 
+{
 
 }

@@ -2,11 +2,13 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Setting } from './setting';
 
-describe('Setting', () => {
+describe('Setting', () => 
+{
   let component: Setting;
   let fixture: ComponentFixture<Setting>;
 
-  beforeEach(async () => {
+  beforeEach(async () => 
+  {
     await TestBed.configureTestingModule({
       imports: [Setting]
     })
@@ -17,7 +19,8 @@ describe('Setting', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create', () => 
+  {
     expect(component).toBeTruthy();
   });
 });

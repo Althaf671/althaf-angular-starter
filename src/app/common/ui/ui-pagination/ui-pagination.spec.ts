@@ -2,11 +2,13 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UiPagination } from './ui-pagination';
 
-describe('UiPagination', () => {
+describe('UiPagination', () => 
+{
   let component: UiPagination;
   let fixture: ComponentFixture<UiPagination>;
 
-  beforeEach(async () => {
+  beforeEach(async () => 
+  {
     await TestBed.configureTestingModule({
       imports: [UiPagination]
     })
@@ -17,7 +19,8 @@ describe('UiPagination', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create', () => 
+  {
     expect(component).toBeTruthy();
   });
 });

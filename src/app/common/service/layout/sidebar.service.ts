@@ -3,19 +3,23 @@ import { Injectable, signal } from '@angular/core';
 @Injectable({
     providedIn: 'root'
 })
-export class SidebarService {
+export class SidebarService 
+{
     
-    public isOpen = signal(true)
+    public isOpen = signal(true);
 
-    toggle() {
-        this.isOpen.update(v => !v)
+    toggle() 
+    {
+        this.isOpen.update(v => !v);
     }
 
-    open() {
+    open() 
+    {
         this.isOpen.set(true);
     }
 
-    close() {
+    close() 
+    {
         this.isOpen.set(false);
     }
 }

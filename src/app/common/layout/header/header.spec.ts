@@ -2,11 +2,13 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Header } from './header';
 
-describe('Header', () => {
+describe('Header', () => 
+{
   let component: Header;
   let fixture: ComponentFixture<Header>;
 
-  beforeEach(async () => {
+  beforeEach(async () => 
+  {
     await TestBed.configureTestingModule({
       imports: [Header]
     })
@@ -17,7 +19,8 @@ describe('Header', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create', () => 
+  {
     expect(component).toBeTruthy();
   });
 });

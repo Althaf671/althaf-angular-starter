@@ -1,12 +1,12 @@
 import { 
-    AppWindow, 
-    ContactRound, 
-    DoorOpen, 
+    // AppWindow, 
+    // ContactRound, 
+    // DoorOpen, 
     FileCog, 
     Gauge, 
-    Inbox, 
-    Landmark, 
-    ListChecks, 
+    // Inbox, 
+    // Landmark, 
+    // ListChecks, 
     Settings, 
     SquareActivity, 
     ToolCase 

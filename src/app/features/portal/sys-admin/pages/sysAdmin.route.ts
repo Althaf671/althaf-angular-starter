@@ -6,21 +6,6 @@ export const administrationPages: Routes = [
         title: 'Home • Admin',
         loadComponent: () => import('./home/home').then(c => c.Home),
         data: { breadcrumbs: 'Home' },
-        children: [
-            { 
-                path: 'inner',
-                title: 'Inner page',
-                loadComponent: () => import('./home/inner/inner').then(cc => cc.Inner),  // cc = child component
-                data: { breadcrumbs: 'Child' },
-                children: [
-                    {
-                        path: 'grand',
-                        loadComponent: () => import('./home/inner/grand/grand').then(gc => gc.Grand),
-                        data: { breadcrumbs: 'GrandChild' }
-                    }
-                ]
-            }
-        ]
     },
     {
         path: 'finance',

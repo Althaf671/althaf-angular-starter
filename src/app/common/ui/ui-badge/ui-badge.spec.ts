@@ -2,11 +2,13 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UiBadge } from './ui-badge';
 
-describe('UiBadge', () => {
+describe('UiBadge', () => 
+{
   let component: UiBadge;
   let fixture: ComponentFixture<UiBadge>;
 
-  beforeEach(async () => {
+  beforeEach(async () => 
+  {
     await TestBed.configureTestingModule({
       imports: [UiBadge]
     })
@@ -17,7 +19,8 @@ describe('UiBadge', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create', () => 
+  {
     expect(component).toBeTruthy();
   });
 });

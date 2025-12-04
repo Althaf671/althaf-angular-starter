@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, Input, signal } from '@angular/core';
+import { Component, ElementRef, HostListener, Input, signal, inject } from '@angular/core';
 import { TMenuItemsConfig, UiIcons } from '@/ui/index';
 import { RouterLink, RouterLinkActive } from "@angular/router";
 
@@ -8,13 +8,15 @@ import { RouterLink, RouterLinkActive } from "@angular/router";
   templateUrl: './ui-menu.html',
   styleUrl: './ui-menu.scss',
 })
-export class UiMenu {
-  constructor (private elementRef: ElementRef) {};
+export class UiMenu 
+{
+  private elementRef = inject(ElementRef);
 
   // ! Toggle menu
   public isOpen = signal(false);
 
-  toggleMenu() {
+  toggleMenu() 
+  {
     this.isOpen.update((isOpen) => !isOpen);
   }
 
@@ -23,8 +25,10 @@ export class UiMenu {
 
   // ! Handle outside click
   @HostListener('document:click', ['$event'])
-  isClicked(event: Event) {
-    if (this.isOpen() && !this.elementRef.nativeElement.contains(event.target)) {
+  isClicked(event: Event) 
+  {
+    if (this.isOpen() && !this.elementRef.nativeElement.contains(event.target)) 
+    {
       this.isOpen.set(false);
     }
   }
