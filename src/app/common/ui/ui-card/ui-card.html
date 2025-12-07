@@ -1,1 +1,56 @@
-<p>ui-card works!</p>
+@if (cardMetricConfig) {
+    <div 
+        class="card-metric"
+        [class]="'-' + cardMetricConfig.name"
+    >
+        <div class="header">
+            <span class="icon-wrapper">
+                <app-ui-icons 
+                    provider="hugeIcon"
+                    [iconItems]="cardMetricConfig.icon"
+                />                
+            </span>
+            <h3>{{ cardMetricConfig.name }}</h3>
+            <span class="info-btn">
+                <app-ui-icons 
+                    provider="hugeIcon"
+                    [iconItems]="cardMetricConfig.detailIcon"
+                /> 
+            </span>
+        </div>
+        <div class="body">
+            <span class="metric-value">{{ cardMetricConfig.metricValue }}</span>
+        </div>
+        <div class="footer">
+            <span class="percentage-rate">{{ cardMetricConfig.percentageRate }}</span>
+            <p>{{ cardMetricConfig.infoText }}</p>
+        </div>
+    </div>
+}
+
+@switch (cardNotificationConfig?.level) {
+    @case ("auth") {
+        <div 
+            class="card-notification"
+            [class]="'-' + cardNotificationConfig?.status"
+        >
+        1
+        </div>
+    }
+    @case ("info") {
+        <div 
+            class="card-info"
+            [class]="'-' + cardNotificationConfig?.status"
+        >
+1
+        </div>
+    }
+    @case ("payment") {
+        <div 
+            class="card-payment"
+            [class]="'-' + cardNotificationConfig?.status"
+        >
+1
+        </div>
+    }
+}

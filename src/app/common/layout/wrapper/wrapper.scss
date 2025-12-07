@@ -9,3 +9,10 @@
     background-color: var(--color-secondary);
     padding: 0;
 }
+
+@media (max-width: 440px) {
+    
+    .main-wrapper {
+        padding-left: 3.1em;
+    }
+}

@@ -1,5 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class RouterStateService
   private router = inject(Router);
 
   //=== ! Get isCurrentRoute value ===//
-  isCurrentRoute(segment: string): boolean 
+  public isCurrentRoute(segment: string): boolean 
   {
     // Logger
     console.log("Current route: " + this.router.url); 
@@ -24,7 +25,7 @@ export class RouterStateService
    * this method request a callback that has value of url with type of string
    * this method will return router.event.subscribe with 'this.route.url' as observed 
    */
-  subscribeRoute(callback: (url: string) => void)
+  public subscribeRoute(callback: (url: string) => void): Subscription
   {
     return this.router.events.subscribe(event => 
     {

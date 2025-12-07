@@ -16,6 +16,8 @@ module.exports = defineConfig([
     processor: angular.processInlineTemplates,
     rules: {
       "brace-style": ["error", "allman"],
+      "@typescript-eslint/explicit-member-accessibility": "error",
+      "@typescript-eslint/explicit-function-return-type": "error", 
       "@angular-eslint/directive-selector": [
         "error",
         {

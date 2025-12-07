@@ -1,7 +1,7 @@
 import { LucideIconData } from "lucide-angular";
 
 export interface IIconItemsConfig {
-    icon: any;
+    icon: LucideIconData;
     size: number;
     strokeWidth: number;
     color: string;

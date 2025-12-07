@@ -1,7 +1,7 @@
 export interface IModalItemsConfig {
     title: string;
     description?: string;
-    form?: any;
+    form?: unknown;
     type: "info" | "actions";
     action?: "submit" | "continue" | "delete";
 }

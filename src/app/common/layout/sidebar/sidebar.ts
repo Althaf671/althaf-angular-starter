@@ -23,6 +23,7 @@ export class Sidebar
   toggle() 
   {
     this.sidebar.toggle();
+    console.log("is sidebar open: " + this.sidebar.isOpen)
   }
 
   // Sidebar header config

@@ -21,11 +21,11 @@ export class UiBreadcrumbs implements OnInit, OnDestroy
   private router = inject(Router);
 
   // ! Icons
-  readonly ChevronRight = ChevronRight;
+  public readonly ChevronRight = ChevronRight;
 
   // ! Initiate breadcrumbs
   private routesubs?: Subscription;
-  ngOnInit(): void 
+  public ngOnInit(): void 
   {
     // Initiate for the first time
     this.breadcrumbsBuilder(); 
@@ -43,7 +43,7 @@ export class UiBreadcrumbs implements OnInit, OnDestroy
 
   // ! Breadcrumbs route traverse
   public breadcrumbItems: TBreadcrumbsItemsConfig = [];
-  private breadcrumbsBuilder() 
+  public breadcrumbsBuilder(): void 
   {
     let currentRoute: ActivatedRouteSnapshot | null = this.router.routerState.snapshot.root;
     const breadcrumb: TBreadcrumbsItemsConfig = [];
@@ -70,13 +70,13 @@ export class UiBreadcrumbs implements OnInit, OnDestroy
   }
 
   // ! Last item of breadcrumbs
-  lastItems(i: number, arr: TBreadcrumbsItemsConfig) 
+  public lastItems(i: number, arr: TBreadcrumbsItemsConfig): boolean 
   {
     return i === arr.length - 1;
   }
 
   // ! Destroy breadcrumbs observer (subs)
-  ngOnDestroy(): void 
+  public ngOnDestroy(): void 
   {
     this.routesubs?.unsubscribe();
   }

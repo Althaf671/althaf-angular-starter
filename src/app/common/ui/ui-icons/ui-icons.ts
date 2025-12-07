@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { LucideAngularModule, LucideIconData } from 'lucide-angular';
+import { LucideAngularModule } from 'lucide-angular';
 import { IIconItemsConfig } from '../models/icon.model';
 
 @Component({
@@ -10,13 +10,16 @@ import { IIconItemsConfig } from '../models/icon.model';
 })
 export class UiIcons 
 {
+  @Input() public provider?: "lucideIcon" | "hugeIcon" = "lucideIcon";
+
+  @Input() public iconClass?: string; // For hugeicons
   
-  @Input() icon!: any;
+  @Input() public iconItems!: IIconItemsConfig;
 
-  @Input() color!: string;
+  @Input() public color!: string;
 
-  @Input() strokeW!: number;
+  @Input() public strokeW!: number;
 
-  @Input() size!: string | number;
+  @Input() public size!: string | number;
   
 }

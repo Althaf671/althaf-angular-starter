@@ -1,5 +1,5 @@
 <aside 
-    [class.open]="sidebar.isOpen()" 
+    [class.open]="!sidebar.isOpen()" 
     id="nav"
 >
 
@@ -38,7 +38,7 @@
                         [routerLinkActiveOptions]="{ exact: true }"                   
                     >
                         <app-ui-icons 
-                            [icon]="item.icon" 
+                            [icon]="item.icon.icon" 
                             [color]="item.icon.color" 
                             [size]="item.icon.size" 
                             [strokeW]="item.icon.strokeWidth" 
@@ -106,6 +106,6 @@
     </div>
 
     <!-- Overlay for mobile -->
-    <div class="overlay" [class.open]="!sidebar.isOpen()"></div>
+    <div class="overlay" [class.open]="sidebar.isOpen()"></div>
     
 </aside>

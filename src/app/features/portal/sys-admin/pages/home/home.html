@@ -12,10 +12,10 @@
     />
 
     <!-- TO DO -->
-    <app-ui-modal [modalConfig]="modalInfolItems" />
+    <!-- <app-ui-modal [modalConfig]="modalInfolItems" /> -->
 
     <!-- Body -->
-    <app-wrapper slot="body">
+    <div class="home-content">
 
         <!-- Header -->
         <div role="banner" class="header">
@@ -34,16 +34,20 @@
         <!-- Grid container -->
         @if (isHomePage) 
         {
-            <ng-container role="grid" class="grid-container">
+            <div role="grid" class="grid-container">
 
                 <!-- Metric panel -->
                 <div class="metric-panel" style="grid-area: metric-panel;">
-
+                    <app-ui-card [cardMetricConfig]="totalProfit" />
+                    <app-ui-card [cardMetricConfig]="totalSuccessTransaction" />
+                    <app-ui-card [cardMetricConfig]="totalUsers" />
+                    <app-ui-card [cardMetricConfig]="totalActiveUsers" />
                 </div>
 
                 <!-- Bar Chart -->
                 <div class="bar-chart-container" style="grid-area: bar-chart;">
                     <p>Bar Chart</p>
+                    <i class="hgi hgi-stroke hgi-home-01"></i>
                 </div>
 
                 <!-- Todo list -->
@@ -52,18 +56,18 @@
                 </div>
 
                 <!-- BSK -->
-                <app-ui-card />
+                <!-- <app-ui-card /> -->
 
-            </ng-container>
+            </div>
         }
 
-        <router-outlet></router-outlet>
+        <!-- <router-outlet></router-outlet> -->
 
         <!-- Footer -->
         <div class="footer">
             <p>Footer</p>
         </div>
 
-    </app-wrapper>
+    </div>
 
 </main>

@@ -9,7 +9,7 @@ import {
     // ListChecks, 
     Settings, 
     SquareActivity, 
-    ToolCase 
+    ToolCase,
 } from "lucide-angular";
 
 export const SIDEBAR_HEADER_ITEMS = { 

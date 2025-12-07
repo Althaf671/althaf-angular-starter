@@ -15,5 +15,9 @@ export { UiTabs } from './ui-tabs/ui-tabs'
 // UI models
 export type { TBreadcrumbsItemsConfig } from './models/breadcrumbs.model';
 export type { IIconItemsConfig} from './models/icon.model';
-export type { TMenuItemsConfig } from './models/menu.model';
+export type { IMenuItemsConfig } from './models/menu.model';
 export type { IModalItemsConfig } from './models/modal.model';
+export type { 
+    IMetricCardConfigItems, 
+    INotificationCardConfigItems 
+} from './models/card.model';
