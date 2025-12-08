@@ -6,3 +6,9 @@ export interface IIconItemsConfig {
     strokeWidth: number;
     color: string;
 }
+
+export interface IIconStyleConfig {
+    'font-size': string;
+    'color': string;
+    'font-weight': string;
+}

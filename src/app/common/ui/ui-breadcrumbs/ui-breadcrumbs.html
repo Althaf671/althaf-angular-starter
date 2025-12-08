@@ -9,11 +9,8 @@
                         <span class="prev-route">{{ item.label }}</span>
                     </a>
                     <app-ui-icons 
-                        [color]="'#64748b74'"
-                        [size]="21"
-                        [strokeW]="2"
-                        [icon]="ChevronRight"
-                        class="icon"
+                        [provider]="setIcon"
+                        [iconItems]="ChevronRightIcon"
                     />
                 </li>
             } 

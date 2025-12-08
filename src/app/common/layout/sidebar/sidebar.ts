@@ -4,6 +4,7 @@ import { AppWindow, DoorOpen, } from 'lucide-angular';
 import { RouterLink, RouterLinkActive } from "@angular/router";
 import { SidebarService } from '../../service/layout/sidebar.service';
 import { TSidebarMenuItemsConfig } from '@/layout/index';
+import { IconProviderService } from '../../service/ui/icon.provider.sevice';
 
 @Component({
   selector: 'app-sidebar',
@@ -13,31 +14,44 @@ import { TSidebarMenuItemsConfig } from '@/layout/index';
 })
 export class Sidebar 
 {
-  sidebar = inject(SidebarService);
+  private iconService = inject(IconProviderService);
+  protected sidebar = inject(SidebarService);
 
 
   // Sidebar icons
-  readonly MenuIcons = AppWindow;
-  readonly LogoutIcon = DoorOpen;
+  protected readonly MenuIcons = { 
+    icon: AppWindow, 
+    strokeWidth: 1.5,
+    color: 'var(--color-icon)', 
+    size: 24
+  };
+  protected readonly LogoutIcon = { 
+    icon: DoorOpen, 
+    strokeWidth: 1.5,
+    color: 'white', 
+    size: 24
+  };
+  protected setIcon = this.iconService.iconProvider();
+
   
-  toggle() 
+  protected toggle(): void 
   {
     this.sidebar.toggle();
     console.log("is sidebar open: " + this.sidebar.isOpen)
   }
 
   // Sidebar header config
-  @Input() portalName!: string;
+  @Input() public portalName!: string;
 
-  @Input() email!: string;
+  @Input() public email!: string;
 
   // Sidebar primary menu items
-  @Input() primaryMenuItems!: TSidebarMenuItemsConfig;
+  @Input() public primaryMenuItems!: TSidebarMenuItemsConfig;
 
   // Sidebar secondary menu items
-  @Input() secondaryMenuItems!: TSidebarMenuItemsConfig;
+  @Input() public secondaryMenuItems!: TSidebarMenuItemsConfig;
 
   // Sidebar third menu items
-  @Input() thirdMenuItems!: TSidebarMenuItemsConfig;
+  @Input() public thirdMenuItems!: TSidebarMenuItemsConfig;
   
 }

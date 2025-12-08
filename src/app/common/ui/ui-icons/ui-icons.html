@@ -1,8 +1,11 @@
 @switch (provider) {
-    @case ('hugeIcon') {
-        <i [class]="iconClass"></i>
+    @case ("hugeIcon") {
+        <i 
+            [class]="iconClass"
+            [style]="iconStyle"
+        ></i>
     }
-    @case ('lucideIcon') {
+    @case ("lucideIcon") {
         <lucide-icon
             [img]="iconItems.icon"
             [color]="iconItems.color"
@@ -12,3 +15,5 @@
         </lucide-icon>  
     }
 }
+
+<!-- Banyak yang perlu direafctor -->
