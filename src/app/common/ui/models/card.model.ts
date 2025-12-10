@@ -1,12 +1,24 @@
-import { IIconItemsConfig } from "./icon.model";
+import { IIconItemsConfig, IIconStyleConfig } from "./icon.model";
 
 export interface IMetricCardConfigItems {
     name: string;
-    icon: IIconItemsConfig;
-    metricValue: number;
-    valueSymbol: string;
+    icon: {
+        lucideIcon: IIconItemsConfig;
+        hugeIcon: {
+            icon: string;
+            style?: IIconStyleConfig
+        };
+    };
+    metricValue: string;
+    valueSymbol?: string;
     percentageRate: 'increase' | 'decrease' | 'neutral';
-    detailIcon: IIconItemsConfig;
+    detailIcon: {
+        lucideIcon: IIconItemsConfig;
+        hugeIcon: {
+            icon: string;
+            style?: IIconStyleConfig
+        };
+    };
     infoText: string;
 }
 

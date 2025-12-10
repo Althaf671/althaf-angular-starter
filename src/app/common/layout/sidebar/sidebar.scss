@@ -66,9 +66,9 @@ span {
     top: 0;
     align-self: start;   
     box-sizing: border-box;
-    min-height: 100vh;
+    max-height: 100vh;
     width: 270px;
-    background-color: var(--color-secondary);
+    background-color: var(--color-sidebar);
     transition: 300ms ease-in-out;
     text-wrap: nowrap;
     overflow-y: scroll;
@@ -80,7 +80,7 @@ span {
         height: 120dvh;
 
         ul:nth-child(1) {
-            margin: 1rem 1em 1.5rem 1em;
+            margin: 2rem 1em 2rem 1em;
             border-bottom: 1px solid var(--color-border);
 
             .logo-container {
@@ -135,8 +135,7 @@ span {
                     display: flex;
                     gap: 1rem;
                     align-items: center;
-                    border-radius: .5em;
-                    padding: .25em .5em .25em 1em;
+                    padding: .25em .75em;
                     transition: 300ms ease-in-out;
                     width: 100%;
 
@@ -147,6 +146,7 @@ span {
 
                 a.active {
                     background-color: var(--color-secondary);
+                    border-left: 2.35px solid rgba(0, 0, 0, 0.576);
                 }
             }
 
@@ -178,7 +178,7 @@ span {
 
     .logout-container {
         position: fixed;
-        bottom: 0;
+        bottom: 0px;
         left: 0;
         align-self: start;   
         box-sizing: border-box;
@@ -203,25 +203,41 @@ span {
     }
 
     .overlay {
-        display: none;
+        opacity: 0;
     }
 }
 
 @media(max-width: 440px) {
     #nav.open {
-        width: 50px;
+        width: 60px;
+        padding: 0 .5em;
 
         .navigation-container {
+            
             ul li:not(.logo-container) {
+
                 a {
                     padding: .25em .35em;
+                    margin-left: 5px;
+                }
+            }
+
+            ul:nth-child(1) {
+                background: var(--color-sidebar);
+                margin-top: 1.25rem;
+                border-radius: 22px;
+                padding-block: 0em;
+                height: 65px;
+
+                #toggle-btn {
+                    margin-right: 0;
+                    margin-top: 0;
                 }
             }
         }
 
         .logout-container {
-            padding: .75em .5em .75em .5em;
-            width: 50px;
+           
         }
     }
 
@@ -236,6 +252,10 @@ span {
                     margin-right: -0.4rem;
                 }
             }
+
+            ul:nth-child(1) {
+                margin: 1.5rem 1em 2rem 1em;
+            }
         }
 
         .logout-container {
@@ -246,6 +266,7 @@ span {
             display: block;
             transition: 300ms ease-in-out;
             transform: translateX(100px);
+            width: 30%;
         }
 
         .overlay.open {

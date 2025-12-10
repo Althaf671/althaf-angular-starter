@@ -1,12 +1,12 @@
 /* Admin colors */
 :host-context(.app-layout) {
-    --color-primary: #1d1d1f;
+    --color-primary: #282828;
     --color-secondary: #f8f9fa;
     --color-sidebar: #ffffff;
     --color-accent: #0066cc;
-    --color-text: #242528;
+    --color-text: #6c6b6b;
     --color-border: #3c3c431f;
-    --color-icon: #64748b;
+    --color-icon: #6c6b6b;
 }
 
 :host-context(.app-layout-dark) {

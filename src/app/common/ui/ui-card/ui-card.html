@@ -1,24 +1,37 @@
 @if (cardMetricConfig) {
-    <div 
-        class="card-metric"
-        [class]="'-' + cardMetricConfig.name"
-    >
+    <div class="card-metric">
         <div class="header">
-            <span class="icon-wrapper">
-                <app-ui-icons 
-                    provider="hugeIcon"
-                    [iconItems]="cardMetricConfig.icon"
-                />                
-            </span>
+            @if (isFirstChild) {
+                <span class="icon-wrapper-dark">
+                    <app-ui-icons 
+                        [provider]="setIcon"
+                        [iconClass]="cardMetricConfig.icon.hugeIcon.icon"
+                        [iconStyle]="cardMetricConfig.icon.hugeIcon.style"
+                        [iconItems]="cardMetricConfig.icon.lucideIcon"
+                    />                               
+                </span>
+            } @else {
+                <span class="icon-wrapper">
+                    <app-ui-icons 
+                        [provider]="setIcon"
+                        [iconClass]="cardMetricConfig.icon.hugeIcon.icon"
+                        [iconStyle]="cardMetricConfig.icon.hugeIcon.style"
+                        [iconItems]="cardMetricConfig.icon.lucideIcon"
+                    />                
+                </span>
+            }
             <h3>{{ cardMetricConfig.name }}</h3>
             <span class="info-btn">
                 <app-ui-icons 
                     provider="hugeIcon"
-                    [iconItems]="cardMetricConfig.detailIcon"
+                    [iconClass]="cardMetricConfig.detailIcon.hugeIcon.icon"
+                    [iconStyle]="cardMetricConfig.detailIcon.hugeIcon.style"
+                    [iconItems]="cardMetricConfig.detailIcon.lucideIcon"
                 /> 
             </span>
         </div>
         <div class="body">
+            <span class="metric-symbol">{{ cardMetricConfig.valueSymbol }}</span>
             <span class="metric-value">{{ cardMetricConfig.metricValue }}</span>
         </div>
         <div class="footer">

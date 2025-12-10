@@ -1,11 +1,12 @@
 import { Bell } from "lucide-angular";
-import { MENU_CONFIG } from "../pages/home/common/ui-config/menu.config";
+import { MENU_CONFIG } from "./service/ui-config/menu.config";
 import { 
     SIDEBAR_HEADER_ITEMS, 
     SIDEBAR_PRIMARY_MENU_ITEMS, 
     SIDEBAR_SECONDARY_MENU_ITEMS, 
     SIDEBAR_THIRD_MENU_ITEMS 
 } from "./service/ui-config/sidebar.config";
+import { NAVBAR_CONFIG } from "./service/ui-config/navbar.config";
 
 export abstract class BasePageComponent  
 {
@@ -16,6 +17,7 @@ export abstract class BasePageComponent
   public readonly  pageLayoutConfig = {
     headerIcons: { NotificationIcon: Bell },
     menuConfig: MENU_CONFIG,
+    navbarConfig: NAVBAR_CONFIG,
     sidebarConfigs: 
     {
       headerItems: SIDEBAR_HEADER_ITEMS,
@@ -27,8 +29,8 @@ export abstract class BasePageComponent
   //============== END OF PROPERTY ===============//
 
   // Required methods
-  protected abstract loadMetricData(): void;
-  protected abstract loadBarChartData(): void;
-  protected abstract loadPieChartData(): void;
+  // protected abstract loadMetricData(): void;
+  // protected abstract loadBarChartData(): void;
+  // protected abstract loadPieChartData(): void;
   // later it will only for props, method will be handle by seperated service classes
 }

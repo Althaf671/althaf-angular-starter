@@ -1,6 +1,12 @@
 <div class="finance__page">
 
     <!-- Sidebar -->
-    <app-sidebar />
+    <app-sidebar 
+        [portalName]="pageLayoutConfig.sidebarConfigs.headerItems.portalName" 
+        [email]="pageLayoutConfig.sidebarConfigs.headerItems.email" 
+        [primaryMenuItems]="pageLayoutConfig.sidebarConfigs.primaryItems"
+        [secondaryMenuItems]="pageLayoutConfig.sidebarConfigs.secondaryItems"
+        [thirdMenuItems]="pageLayoutConfig.sidebarConfigs.thirdItems"
+    />
     
 </div>

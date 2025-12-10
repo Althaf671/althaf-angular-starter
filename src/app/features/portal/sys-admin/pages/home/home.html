@@ -1,7 +1,5 @@
 <main class="home__page">
 
-    <!-- Need that fullscreen feature -->
-
     <!-- Sidebar -->
     <app-sidebar 
         [portalName]="pageLayoutConfig.sidebarConfigs.headerItems.portalName" 
@@ -11,62 +9,51 @@
         [thirdMenuItems]="pageLayoutConfig.sidebarConfigs.thirdItems"
     />
 
-    <!-- TO DO -->
-    <!-- <app-ui-modal [modalConfig]="modalInfolItems" /> -->
-
     <!-- Body -->
     <div class="home-content">
 
-        <!-- Header -->
-        <div role="banner" class="header">
-            <div class="page-title">
-                <h2>Overview</h2>
-                <app-ui-breadcrumbs />
-            </div>
-            <div role="group" class="button-group">
-                <button>
-                    <!-- <app-ui-icons [icon]="pageLayoutConfig.headerIcons.NotificationIcon" [color]="'var(--color-icon)'" [size]="23" [strokeW]="1.5"></app-ui-icons> -->
-                </button>
-                <app-ui-menu [menuItems]="pageLayoutConfig.menuConfig" />
-            </div>
-        </div>
-
-        <!-- Grid container -->
         @if (isHomePage) 
         {
-            <div role="grid" class="grid-container">
+        <!-- Navbar --> 
+            <app-navbar 
+                [navbarItem]="pageLayoutConfig.navbarConfig" 
+                [menuItems]="pageLayoutConfig.menuConfig" 
+            />
+
+            <!-- Header --> 
+            <app-header />
+
+            <!-- Content  -->
+            <div class="main-content">
 
                 <!-- Metric panel -->
-                <div class="metric-panel" style="grid-area: metric-panel;">
-                    <!-- <app-ui-card [cardMetricConfig]="totalProfit" />
+                <section class="metrics">
+                    <app-ui-card [isFirstChild]="true" [cardMetricConfig]="totalProfit" />
                     <app-ui-card [cardMetricConfig]="totalSuccessTransaction" />
                     <app-ui-card [cardMetricConfig]="totalUsers" />
-                    <app-ui-card [cardMetricConfig]="totalActiveUsers" /> -->
-                </div>
+                    <app-ui-card [cardMetricConfig]="totalActiveUsers" />
+                </section>
 
-                <!-- Bar Chart -->
-                <div class="bar-chart-container" style="grid-area: bar-chart;">
-                    <p>Bar Chart</p>
-                    <i class="hgi hgi-stroke hgi-home-01"></i>
-                </div>
+                <!-- Statistic panel -->
+                <section class="statistic">
+                    <div class="chart-container"></div>
+                    <div class="summary-container"></div>
+                </section>
 
-                <!-- Todo list -->
-                <div class="todo-list-container" style="grid-area: todo;">
-                    <p>Todo List</p>
-                </div>
-
-                <!-- BSK -->
-                <!-- <app-ui-card /> -->
-
+                <section class="overall">
+                    <div class="pie-chart"></div>
+                    <div class="top-employee"></div>
+                    <div class="priority-task"></div>
+                </section>
             </div>
         }
 
         <!-- <router-outlet></router-outlet> -->
 
         <!-- Footer -->
-        <div class="footer">
+        <!-- <div class="footer">
             <p>Footer</p>
-        </div>
+        </div> -->
 
     </div>
 

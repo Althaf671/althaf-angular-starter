@@ -2,12 +2,7 @@ import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { Sidebar } from "@/layout/sidebar/sidebar";
 import { Subscription } from 'rxjs';
 import { RouterStateService } from '@/app/common/service/state/router.state.service';
-import { 
-  UiIcons, 
-  UiMenu, 
-  UiBreadcrumbs, 
-  // UiCard, 
-} from "@/ui/index";
+import { UiIcons, UiMenu, UiBreadcrumbs, UiCard } from "@/ui/index";
 import { 
   totalActiveUsers, 
   totalProfit, 
@@ -15,6 +10,9 @@ import {
   totalUsers 
 } from './common/dashboard-data/metric.data';
 import { BasePageComponent } from '../../common/base-page-component';
+import { IconProviderService } from '@/app/common/service/ui/icon.provider.sevice';
+import { AppWindow } from 'lucide-angular';
+import { Navbar, Header } from "@/app/common/layout";
 
 
 @Component({
@@ -24,7 +22,9 @@ import { BasePageComponent } from '../../common/base-page-component';
     Sidebar,
     UiMenu,
     UiBreadcrumbs,
-    // UiCard
+    UiCard,
+    Navbar,
+    Header,
 ],
   templateUrl: './home.html',
   styleUrl: './home.scss',
@@ -33,6 +33,15 @@ export class Home extends BasePageComponent implements OnInit, OnDestroy
 {
   // Dependecy injections
   private routerState = inject(RouterStateService);
+  private iconService = inject(IconProviderService);
+  protected setIcon = this.iconService.iconProvider();
+
+  protected readonly MenuIcons = { 
+    icon: AppWindow, 
+    strokeWidth: 1.5,
+    color: 'var(--color-icon)', 
+    size: 24
+  };
 
 
   //========== METHOD HOME CONTENT VISIBILITY ==========//

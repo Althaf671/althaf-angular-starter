@@ -1,48 +1,125 @@
 import { IMetricCardConfigItems } from "@/app/common/ui";
 import { 
+    ArchiveRestore,
     CheckCheck, 
     CircleDollarSign, 
     Info, 
     UserRound, 
-    UserRoundCheck 
 } from "lucide-angular";
 
 export const totalProfit: IMetricCardConfigItems = {
-    icon: { icon: CircleDollarSign, color: 'var(--color-icon)', size: 24, strokeWidth: 2.25 },
-    detailIcon: { icon: Info, color: 'var(--color-icon)', size: 20, strokeWidth: 1.5 },
+    icon: {
+        lucideIcon: { icon: CircleDollarSign, color: 'var(--color-icon)', size: 24, strokeWidth: 2.25 },
+        hugeIcon: { 
+            icon: 'hgi hgi-stroke hgi-dollar-02',
+            style: {
+                'font-size':' 23px', 
+                'color': 'var(--color-sidebar)', 
+                'font-weight': '500'
+            }
+        }
+    },
+    detailIcon: {
+        lucideIcon: { icon: Info, color: 'var(--color-icon)', size: 20, strokeWidth: 1.5 },
+        hugeIcon: { 
+            icon: 'hgi hgi-stroke hgi-information-circle',
+            style: {
+                'font-size':' 23px', 
+                'color': 'var(--color-icon)', 
+                'font-weight': '500'
+            }
+        },
+    },
     name: "Total Profit",
-    metricValue: 100,
+    metricValue: '49,000',
     valueSymbol: "$",
     percentageRate: "increase",
     infoText: "From the Last Month"
 }
 
 export const totalUsers: IMetricCardConfigItems = {
-    icon: { icon: UserRound, color: 'var(--color-icon)', size: 24, strokeWidth: 2.25 },
-    detailIcon: { icon:Info, color: 'var(--color-icon)', size: 20, strokeWidth: 1.5 },
-    name: "Total Users",
-    metricValue: 100,
-    valueSymbol: "$",
+    icon: {
+        lucideIcon: { icon: UserRound, color: 'var(--color-icon)', size: 24, strokeWidth: 2.25 },
+        hugeIcon: { 
+            icon: 'hgi hgi-stroke hgi-user-group',
+            style: {
+                'font-size':' 23px', 
+                'color': 'var(--color-primary)', 
+                'font-weight': '500'
+            }
+        }
+    },
+    detailIcon: {
+        lucideIcon: { icon: Info, color: 'var(--color-icon)', size: 20, strokeWidth: 1.5 },
+        hugeIcon: { 
+            icon: 'hgi hgi-stroke hgi-information-circle',
+            style: {
+                'font-size':' 23px', 
+                'color': 'var(--color-icon)', 
+                'font-weight': '500'
+            }
+        },
+    },
+    name: "Total Client",
+    metricValue: '4,700',
     percentageRate: "increase",
     infoText: "From the Last Month"
 }
 
 export const totalSuccessTransaction: IMetricCardConfigItems = {
-    icon: { icon: CheckCheck, color: 'var(--color-icon)', size: 24, strokeWidth: 2.25 },
-    detailIcon: { icon:Info, color: 'var(--color-icon)', size: 20, strokeWidth: 1.5 },
+    icon: {
+        lucideIcon: { icon: CheckCheck, color: 'var(--color-icon)', size: 24, strokeWidth: 2.25 },
+        hugeIcon: { 
+            icon: 'hgi hgi-stroke hgi-package-delivered',
+            style: {
+                'font-size':' 23px', 
+                'color': 'var(--color-primary)', 
+                'font-weight': '500'
+            }
+        }
+    },
+    detailIcon: {
+        lucideIcon: { icon: Info, color: 'var(--color-icon)', size: 20, strokeWidth: 1.5 },
+        hugeIcon: { 
+            icon: 'hgi hgi-stroke hgi-information-circle',
+            style: {
+                'font-size':' 23px', 
+                'color': 'var(--color-icon)', 
+                'font-weight': '500'
+            }
+        },
+    },
     name: "Total Sales",
-    metricValue: 100,
-    valueSymbol: "$",
+    metricValue: '12,000',
     percentageRate: "increase",
     infoText: "From the Last Month"
 }
 
 export const totalActiveUsers: IMetricCardConfigItems = {
-    icon: { icon: UserRoundCheck, color: 'var(--color-icon)', size: 24, strokeWidth: 2.25 },
-    detailIcon: { icon:Info, color: 'var(--color-icon)', size: 20, strokeWidth: 1.5 },
-    name: "Total Active Users",
-    metricValue: 100,
-    valueSymbol: "$",
+    icon: {
+        lucideIcon: { icon: ArchiveRestore, color: 'var(--color-icon)', size: 24, strokeWidth: 2.25 },
+        hugeIcon: { 
+            icon: 'hgi hgi-stroke hgi-id',
+            style: {
+                'font-size':' 23px', 
+                'color': 'var(--color-primary)', 
+                'font-weight': '500'
+            } 
+        }
+    },
+    detailIcon: {
+        lucideIcon: { icon: Info, color: 'var(--color-icon)', size: 20, strokeWidth: 1.5 },
+        hugeIcon: { 
+            icon: 'hgi hgi-stroke hgi-information-circle',
+            style: {
+                'font-size':' 23px', 
+                'color': 'var(--color-icon)', 
+                'font-weight': '500'
+            }
+        },
+    },
+    name: "Total Employees",
+    metricValue: '480',
     percentageRate: "increase",
     infoText: "From the Last Month"
 }

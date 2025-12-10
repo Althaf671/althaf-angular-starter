@@ -33,8 +33,7 @@
                 <li>
                     <a 
                         [routerLink]="item.route"
-                        routerLinkActive="active"
-                        [routerLinkActiveOptions]="{ exact: true }"                   
+                        routerLinkActive="active"                 
                     >
                         <app-ui-icons 
                             [provider]="setIcon"
@@ -49,14 +48,13 @@
         </ul>
 
         <!-- Secondary navigation-->
-        <span class="section-title">Utilities</span>
+        <span class="section-title">Workspace</span>
         <ul>
             @for (item of secondaryMenuItems; track $index) {
                 <li>
                     <a 
                         [routerLink]="item.route"
-                        routerLinkActive="active"
-                        [routerLinkActiveOptions]="{ exact: true }"                   
+                        routerLinkActive="active"                 
                     >
                         <app-ui-icons 
                             [provider]="setIcon"
@@ -77,8 +75,7 @@
                 <li>
                     <a 
                         [routerLink]="item.route"
-                        routerLinkActive="active"
-                        [routerLinkActiveOptions]="{ exact: true }"                   
+                        routerLinkActive="active"                 
                     >
                         <app-ui-icons 
                             [provider]="setIcon"

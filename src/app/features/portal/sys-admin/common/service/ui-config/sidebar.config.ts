@@ -1,17 +1,21 @@
 import { TSidebarMenuItemsConfig } from "@/app/common/layout";
 import { 
+    ChartArea,
     // AppWindow, 
     // ContactRound, 
     // DoorOpen, 
     FileCog, 
     Gauge, 
+    IdCardLanyard, 
+    Inbox, 
     // Inbox, 
-    Landmark, 
+    ListTodo, 
     // ListChecks, 
     Settings, 
     SquareActivity, 
     ToolCase,
 } from "lucide-angular";
+
 
 export const SIDEBAR_HEADER_ITEMS = { 
     portalName: 'System Admin', 
@@ -27,7 +31,7 @@ export const SIDEBAR_PRIMARY_MENU_ITEMS: TSidebarMenuItemsConfig = [
             size: 24
         },
         iconHuge: {
-            icon: 'hgi hgi-stroke hgi-dashboard-browsing',
+            icon: 'hgi hgi-stroke hgi-dashboard-speed-02',
             style: {
                 'font-size':' 24px', 
                 'color': 'var(--color-icon)', 
@@ -35,46 +39,100 @@ export const SIDEBAR_PRIMARY_MENU_ITEMS: TSidebarMenuItemsConfig = [
             }
         },
         route: '/portal/system-administrator/home',
-        name: 'Overview' 
+        name: 'Dashboard' 
     },
     { 
         iconLucide: { 
-            icon: Landmark, 
+            icon: ChartArea, 
             strokeWidth: 1.5,
             color: 'var(--color-icon)', 
             size: 24
         },
         iconHuge: {
-            icon: 'hgi hgi-stroke hgi-bank',
+            icon: 'hgi hgi-stroke hgi-analytics-02',
             style: {
                 'font-size':' 24px', 
                 'color': 'var(--color-icon)', 
                 'font-weight': '500'
             }
         },
-        route: '/portal/system-administrator/home',
-        name: 'Finance' 
+        route: '/portal/system-administrator/analytic',
+        name: 'Analytics' 
+    },
+    { 
+        iconLucide: { 
+            icon: IdCardLanyard, 
+            strokeWidth: 1.5,
+            color: 'var(--color-icon)', 
+            size: 24
+        },
+        iconHuge: {
+            icon: 'hgi hgi-stroke hgi-id',
+            style: {
+                'font-size':' 24px', 
+                'color': 'var(--color-icon)', 
+                'font-weight': '500'
+            }
+        },
+        route: '/portal/system-administrator/finacnce',
+        name: 'Employee' 
     },
 ]
 
 export const SIDEBAR_SECONDARY_MENU_ITEMS: TSidebarMenuItemsConfig = [
     { 
         iconLucide: { 
-            icon: ToolCase, 
+            icon: FileCog, 
             strokeWidth: 1.5,
             color: 'var(--color-icon)', 
             size: 24
         },
         iconHuge: {
-            icon: 'hgi hgi-stroke hgi-tools',
+            icon: 'hgi hgi-stroke hgi-hierarchy-files',
             style: {
                 'font-size':' 24px', 
                 'color': 'var(--color-icon)', 
                 'font-weight': '500'
             }
         },
-        route: '/portal/system-administrator/', 
-        name: 'Tools' 
+        route: '/portal/system-administrator/finance', 
+        name: 'Project' 
+    },
+    { 
+        iconLucide: { 
+            icon: ListTodo, 
+            strokeWidth: 1.5,
+            color: 'var(--color-icon)', 
+            size: 24
+        },
+        iconHuge: {
+            icon: 'hgi hgi-stroke hgi-task-daily-01',
+            style: {
+                'font-size':' 24px', 
+                'color': 'var(--color-icon)', 
+                'font-weight': '500'
+            }
+        },
+        route: '/portal/system-administrator/finance',
+        name: 'Task' 
+    },
+    { 
+        iconLucide: { 
+            icon: FileCog, 
+            strokeWidth: 1.5,
+            color: 'var(--color-icon)', 
+            size: 24
+        },
+        iconHuge: {
+            icon: 'hgi hgi-stroke hgi-calendar-03',
+            style: {
+                'font-size':' 24px', 
+                'color': 'var(--color-icon)', 
+                'font-weight': '500'
+            }
+        },
+        route: '/portal/system-administrator/finance', 
+        name: 'Scheduler' 
     },
     { 
         iconLucide: { 
@@ -91,10 +149,47 @@ export const SIDEBAR_SECONDARY_MENU_ITEMS: TSidebarMenuItemsConfig = [
                 'font-weight': '500'
             }
         },
-        route: '/portal/system-administrator/', 
+        route: '/portal/system-administrator/finance', 
         name: 'File Manager' 
     },
+    { 
+        iconLucide: { 
+            icon: Inbox, 
+            strokeWidth: 1.5,
+            color: 'var(--color-icon)', 
+            size: 24
+        },
+        iconHuge: {
+            icon: 'hgi hgi-stroke hgi-inbox',
+            style: {
+                'font-size':' 24px', 
+                'color': 'var(--color-icon)', 
+                'font-weight': '500'
+            }
+        },
+        route: '/portal/system-administrator/finance',
+        name: 'Inbox' 
+    },
+    { 
+        iconLucide: { 
+            icon: ToolCase, 
+            strokeWidth: 1.5,
+            color: 'var(--color-icon)', 
+            size: 24
+        },
+        iconHuge: {
+            icon: 'hgi hgi-stroke hgi-tools',
+            style: {
+                'font-size':' 24px', 
+                'color': 'var(--color-icon)', 
+                'font-weight': '500'
+            }
+        },
+        route: '/portal/system-administrator/finance', 
+        name: 'Tools' 
+    },
 ]
+
 
 export const SIDEBAR_THIRD_MENU_ITEMS: TSidebarMenuItemsConfig = [
     { 
@@ -105,14 +200,14 @@ export const SIDEBAR_THIRD_MENU_ITEMS: TSidebarMenuItemsConfig = [
             size: 24
         },
         iconHuge: {
-            icon: 'hgi hgi-stroke hgi-web-protection',
+            icon: 'hgi hgi-stroke hgi-activity-03',
             style: {
                 'font-size':' 24px', 
                 'color': 'var(--color-icon)', 
                 'font-weight': '500'
             }
         },
-        route: '/portal/system-administrator/',  
+        route: '/portal/system-administrator/finance',  
         name: 'Monitoring' 
     },
     { 
@@ -130,7 +225,7 @@ export const SIDEBAR_THIRD_MENU_ITEMS: TSidebarMenuItemsConfig = [
                 'font-weight': '500'
             }
         },
-        route: '/portal/system-administrator/', 
+        route: '/portal/system-administrator/finance', 
         name: 'Settings' 
     },
 ]
