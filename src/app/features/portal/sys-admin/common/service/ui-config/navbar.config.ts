@@ -22,7 +22,7 @@ export const NAVBAR_CONFIG: INavbarItemsConfig[] = [
     },
     {
         name: 'Finance',
-        route: '/portal/system-administrator/finance',
+        route: '/portal/system-administrator/home/finance',
         iconLucide: { 
             icon: Gauge, 
             strokeWidth: 1.5,

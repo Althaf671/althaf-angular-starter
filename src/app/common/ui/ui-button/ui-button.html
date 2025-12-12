@@ -1,1 +1,40 @@
-<p>ui-button works!</p>
+@if (buttonItems.type === "button") {
+    <button
+        class="button-default"
+        [class]="'-' + buttonItems.level"
+        [style]="buttonStyle" 
+    >
+        @switch (buttonItems.variant) {
+            @case ("text-icon") {
+                <app-ui-icons  
+                    [provider]="setIcon"
+                    [iconClass]="buttonItems.icon.iconHuge.icon"
+                    [iconItems]="buttonItems.icon.iconLucide"
+                    [iconStyle]="buttonItems.icon.iconHuge.style"
+                />
+                <p>{{ buttonItems.name }}</p>
+            }
+            @case ("icon-only") {
+                <app-ui-icons  
+                    [provider]="setIcon"
+                    [iconClass]="buttonItems.icon.iconHuge.icon"
+                    [iconItems]="buttonItems.icon.iconLucide"
+                    [iconStyle]="buttonItems.icon.iconHuge.style"
+                />
+            }
+            @case ("text-only") {
+                <p>{{ buttonItems.name }}</p>
+            }
+            @default {
+                <p>{{ buttonItems.name }}</p>
+            }
+        }
+    </button>
+}
+
+@if (buttonItems.type === "submit") {
+    <button
+    >
+
+    </button>
+}

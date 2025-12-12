@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: row;
     width: fit-content;
+    min-height: 25px;
 
     ol {
         display: flex;
@@ -23,6 +24,7 @@
         a {
             text-decoration: none;
             color: var(--color-text);
+            letter-spacing: 0.25px;
             
             span {
                 cursor: pointer;
@@ -34,6 +36,8 @@
         span {
             cursor: default;
             opacity: 100%;
+            letter-spacing: 0.25px;
+            color: var(--color-primary);
         }
 
         .icon {

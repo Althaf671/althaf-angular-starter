@@ -61,6 +61,24 @@ export const SIDEBAR_PRIMARY_MENU_ITEMS: TSidebarMenuItemsConfig = [
     },
     { 
         iconLucide: { 
+            icon: ChartArea, 
+            strokeWidth: 1.5,
+            color: 'var(--color-icon)', 
+            size: 24
+        },
+        iconHuge: {
+            icon: 'hgi hgi-stroke hgi-user-group',
+            style: {
+                'font-size':' 24px', 
+                'color': 'var(--color-icon)', 
+                'font-weight': '500'
+            }
+        },
+        route: '/portal/system-administrator/analytic',
+        name: 'Client' 
+    },
+    { 
+        iconLucide: { 
             icon: IdCardLanyard, 
             strokeWidth: 1.5,
             color: 'var(--color-icon)', 

@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { Sidebar } from "@/layout/sidebar/sidebar";
 import { Subscription } from 'rxjs';
 import { RouterStateService } from '@/app/common/service/state/router.state.service';
-import { UiIcons, UiMenu, UiBreadcrumbs, UiCard } from "@/ui/index";
+import { UiIcons, UiMenu, UiBreadcrumbs, UiCard, UiButton } from "@/ui/index";
 import { 
   totalActiveUsers, 
   totalProfit, 
@@ -25,6 +25,7 @@ import { Navbar, Header } from "@/app/common/layout";
     UiCard,
     Navbar,
     Header,
+    UiButton
 ],
   templateUrl: './home.html',
   styleUrl: './home.scss',

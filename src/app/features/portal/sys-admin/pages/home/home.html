@@ -14,7 +14,7 @@
 
         @if (isHomePage) 
         {
-        <!-- Navbar --> 
+            <!-- Navbar --> 
             <app-navbar 
                 [navbarItem]="pageLayoutConfig.navbarConfig" 
                 [menuItems]="pageLayoutConfig.menuConfig" 
@@ -36,8 +36,37 @@
 
                 <!-- Statistic panel -->
                 <section class="statistic">
-                    <div class="chart-container"></div>
-                    <div class="summary-container"></div>
+                    <div class="title">
+                        <h3>Overall Growth <span>+16%</span> </h3>
+                        <div class="filter-container">
+                            <div class="toggle-timeline">
+                                <button>Monthly</button>
+                                <button>Yearly</button>
+                            </div>
+                            <button class="toggle-filter">filter</button>
+                        </div>
+                    </div>
+                    <div class="info-container">
+                        <div class="overall-value">
+                            $4,190
+                        </div>
+                        <div class="legends">
+                            <span>Profit</span>
+                            <span>Sales</span>
+                            <span>Client</span>
+                            <span>Employee</span>
+                        </div>
+                    </div>
+                    <div class="inner-container">
+                        <div class="chart-container">
+                            <div class="header">
+                                <app-ui-button />
+                            </div>
+                        </div>
+                        <div class="summary-container">
+                            <div class="header">Overview</div>
+                        </div>
+                    </div>
                 </section>
 
                 <section class="overall">

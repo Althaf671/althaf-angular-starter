@@ -28,34 +28,106 @@ main {
         gap: 1em;
 
         .main-content {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+            min-width: 100%;
             min-height: 100px;
             overflow-x: auto;
+            overflow-y: hidden;
             gap: 1.5em;
 
             .metrics {
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr 1fr;
                 grid-template-rows: auto;
-                min-width: 100%;
+                min-width: fit-content;
                 min-height: fit-content;  
                 gap: 1.5em;
+
             }
 
             .statistic {
                 display: grid;
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: 1fr;
                 grid-template-rows: auto;
+                min-height: fit-content;  
                 min-width: 100%;
-                min-height: 450px;
-                gap: 1.5em;
-                border-radius: 24px;
+                flex-grow: 1;
+                gap: .75em;
                 background: var(--color-sidebar);
+                padding: .85em 1.25em;
+                border-radius: 24px;
 
-                .chart-container, .summary-container {
+                .title {
+                    display: flex;
+                    min-width: 1fr;
+                    justify-content: space-between;
+                    align-items: center;
+                    min-height: 50px;
+                    border: 1px solid black;
 
+                    h3 {
+                        display: flex;
+                        align-items: center;
+                        height: 100%;
+                    }
+
+                    .filter-container {
+                        display: flex;
+                        align-items: center;
+                        height: 100%;
+                        gap: .5em;
+
+                        .toggle-timeline {
+                            display: flex;
+                            align-items: center;
+                        }
+
+                        .toggle-filter {
+                            
+                        }
+                    }
+                }
+
+                .info-container {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border: 1px solid black;
+    
+
+                    .overall-value {
+                        display: flex;
+                        align-items: center;
+                        height: 100%;
+                        font-size: 2rem;
+                    }
+
+                    .legends {
+                        display: flex;
+                        align-items: center;
+                        height: 100%;
+                        gap: .5em; 
+                  
+                    }
+                }
+
+                .inner-container {
+                    display: grid;
+                    grid-template-columns: 65% auto;
+                    grid-template-rows: auto;
+                    gap: 1.5em;
+    
+
+                    .chart-container, .summary-container {
+                        border: 1px solid black;
+                        min-height: 350px;
+
+                        .header {
+            
+                        }
+                    }
                 }
             }
 
@@ -81,7 +153,7 @@ main {
         .home-content {
             padding: 0.5rem 1rem 0.5rem 1rem;
 
-            .main-content .metrics {
+            .main-content .metrics, .statistic {
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr 1fr;
                 grid-template-rows: auto;
@@ -100,6 +172,14 @@ main {
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: auto;
             }
+
+            .main-content .statistic .inner-container {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: auto;
+                    gap: 1.5em;
+                    min-width: 1fr;
+            }
         }
     }
 }
@@ -114,6 +194,14 @@ main {
                 grid-template-columns: 1fr;
                 grid-template-rows: auto;
             }
+
+            .main-content .statistic .inner-container {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: auto;
+                    gap: 1.5em;
+                    min-width: 1fr;
+            }
         }
     }
 }
@@ -127,6 +215,14 @@ main {
                 display: grid;
                 grid-template-columns: 1fr;
                 grid-template-rows: auto;
+            }
+
+            .main-content .statistic .inner-container {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: auto;
+                    gap: 1.5em;
+                    min-width: 1fr;
             }
         }
     }
