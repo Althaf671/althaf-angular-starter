@@ -1,1 +1,9 @@
-<span></span>
+<span class="badge">
+    <app-ui-icons 
+        [provider]="setIcon"
+        [iconItems]="iconItems.icons.iconLucide"
+        [iconClass]="iconItems.icons.iconHuge.icon"
+        [iconStyle]="iconItems.icons.iconHuge.style"
+    />
+    <ng-content></ng-content>
+</span>

@@ -4,7 +4,7 @@ import { AppWindow, DoorOpen, } from 'lucide-angular';
 import { RouterLink, RouterLinkActive } from "@angular/router";
 import { SidebarService } from '../../service/layout/sidebar.service';
 import { TSidebarMenuItemsConfig } from '@/layout/index';
-import { IconProviderService } from '../../service/ui/icon.provider.sevice';
+import { IconProviderService } from '../../service/ui/icon-services/iconProviderService';
 
 @Component({
   selector: 'app-sidebar',

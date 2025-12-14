@@ -31,7 +31,7 @@ import {
   totalUsers 
 } from './common/dashboard-data/metric.data';
 import { BasePageComponent } from '../../common/base-page-component';
-import { IconProviderService } from '@/app/common/service/ui/icon.provider.sevice';
+import { IconProviderService } from '@/app/common/service/ui/icon-services/iconProviderService';
 import { AppWindow } from 'lucide-angular';
 import { Navbar, Header } from "@/app/common/layout";
 

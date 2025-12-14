@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { IIconItemsConfig, UiBreadcrumbs, UiIcons } from "../../ui";
-import { IconProviderService } from '../../service/ui/icon.provider.sevice';
+import { IconProviderService } from '../../service/ui/icon-services/iconProviderService';
 import { Menu } from 'lucide-angular';
 
 @Component({

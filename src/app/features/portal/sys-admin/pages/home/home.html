@@ -28,10 +28,23 @@
 
                 <!-- Metric panel -->
                 <section class="metrics">
-                    <app-ui-card [isFirstChild]="true" [cardMetricConfig]="totalProfit" />
-                    <app-ui-card [cardMetricConfig]="totalSuccessTransaction" />
-                    <app-ui-card [cardMetricConfig]="totalUsers" />
-                    <app-ui-card [cardMetricConfig]="totalActiveUsers" />
+                    <app-ui-card 
+                        [isFirstChild]="true" 
+                        [cardMetricConfig]="totalProfit" 
+                        [cardBadgeIconItems]="totalProfit.badgeIcon" 
+                    />
+                    <app-ui-card 
+                        [cardMetricConfig]="totalSuccessTransaction" 
+                        [cardBadgeIconItems]="totalSuccessTransaction.badgeIcon" 
+                    />
+                    <app-ui-card 
+                        [cardMetricConfig]="totalUsers" 
+                        [cardBadgeIconItems]="totalUsers.badgeIcon" 
+                    />
+                    <app-ui-card 
+                        [cardMetricConfig]="totalActiveUsers" 
+                        [cardBadgeIconItems]="totalActiveUsers.badgeIcon" 
+                    />
                 </section>
 
                 <!-- Statistic panel -->

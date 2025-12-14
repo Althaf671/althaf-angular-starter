@@ -1,24 +1,13 @@
-import { IIconItemsConfig, IIconStyleConfig } from "./icon.model";
+import { IMultiIconConfig } from "./icon.model";
 
 export interface IMetricCardConfigItems {
     name: string;
-    icon: {
-        lucideIcon: IIconItemsConfig;
-        hugeIcon: {
-            icon: string;
-            style?: IIconStyleConfig
-        };
-    };
+    mainIcon: IMultiIconConfig;
     metricValue: string;
     valueSymbol?: string;
     percentageRate: 'increase' | 'decrease' | 'neutral';
-    detailIcon: {
-        lucideIcon: IIconItemsConfig;
-        hugeIcon: {
-            icon: string;
-            style?: IIconStyleConfig
-        };
-    };
+    detailIcon: IMultiIconConfig;
+    badgeIcon: IMultiIconConfig;
     infoText: string;
 }
 

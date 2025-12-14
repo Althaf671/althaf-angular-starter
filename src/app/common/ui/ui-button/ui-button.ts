@@ -1,7 +1,7 @@
 import { Component, inject, Input } from '@angular/core';
 import { IButtonStyle } from '../models/button.model';
 import { UiIcons } from "../ui-icons/ui-icons";
-import { IconProviderService } from '../../service/ui/icon.provider.sevice';
+import { IconProviderService } from '../../service/ui/icon-services/iconProviderService';
 import { IMultiIconConfig } from '../models/icon.model';
 
 @Component({

@@ -8,7 +8,7 @@ import {
 } from "@angular/router";
 import { ChevronRight } from 'lucide-angular';
 import { Subscription } from 'rxjs';
-import { IconProviderService } from '../../service/ui/icon.provider.sevice';
+import { IconProviderService } from '../../service/ui/icon-services/iconProviderService';
 
 @Component({
   selector: 'app-ui-breadcrumbs',

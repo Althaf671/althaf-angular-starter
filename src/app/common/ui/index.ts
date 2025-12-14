@@ -5,6 +5,7 @@ export { UiBadge } from './ui-badge/ui-badge';
 export { UiBreadcrumbs } from './ui-breadcrumbs/ui-breadcrumbs';
 export { UiButton } from './ui-button/ui-button';
 export { UiCard } from './ui-card/ui-card'
+export { UiDataGrid } from './ui-data-grid/ui-data-grid';
 export { UiDropdown } from './ui-dropdown/ui-dropdown';
 export { UiFilterToolbar } from './ui-filter-toolbar/ui-filter-toolbar';
 export { UiFormContainer } from './ui-form-container/ui-form-container';
@@ -20,6 +21,7 @@ export { UiSpinner } from './ui-spinner/ui-spinner';
 export { UiTable } from './ui-table/ui-table';
 export { UiTabs } from './ui-tabs/ui-tabs'
 export { UiToast } from './ui-toast/ui-toast';
+export { UiTree } from './ui-tree/ui-tree';
 
 // UI component groups
 export { UiAccordionGroup } from './ui-accordion-group/ui-accordion-group'
@@ -38,6 +40,8 @@ export type { IButtonStyle } from './models/button.model';
 export type { 
     IIconItemsConfig, 
     IIconStyleConfig, 
+    IIconHugeItemConfig,
+    IIconLucideItemConfig,
     IMultiIconConfig 
 } from './models/icon.model';
 export type { IMenuItemsConfig } from './models/menu.model';

@@ -10,6 +10,7 @@ export class IconProviderService
   // Inject all parent that called app-icon with 
   // set [provider]="toggle logic with tenary (?) operator" to all app-icon tag
   private provider = "hugeIcon";
+  // phospor - lucide - huge - font awosme - ionic
 
   public iconProvider(): string
   {

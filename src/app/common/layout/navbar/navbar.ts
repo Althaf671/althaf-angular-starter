@@ -1,7 +1,7 @@
 import { Component, inject, Input } from '@angular/core';
 import { IIconItemsConfig, IMenuItemsConfig, UiIcons, UiMenu } from "../../ui";
 import { INavbarItemsConfig } from '../models/navbar.model';
-import { IconProviderService } from '../../service/ui/icon.provider.sevice';
+import { IconProviderService } from '../../service/ui/icon-services/iconProviderService';
 import { Bell } from 'lucide-angular';
 import { RouterLink, RouterLinkActive } from "@angular/router";
 

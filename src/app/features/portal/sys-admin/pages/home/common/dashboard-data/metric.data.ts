@@ -8,27 +8,59 @@ import {
 } from "lucide-angular";
 
 export const totalProfit: IMetricCardConfigItems = {
-    icon: {
-        lucideIcon: { icon: CircleDollarSign, color: 'var(--color-icon)', size: 24, strokeWidth: 2.25 },
-        hugeIcon: { 
-            icon: 'hgi hgi-stroke hgi-dollar-02',
-            style: {
-                'font-size':' 23px', 
-                'color': 'var(--color-sidebar)', 
-                'font-weight': '500'
+    mainIcon: {
+        icons: {
+            iconLucide: { 
+                icon: CircleDollarSign, 
+                color: 'var(--color-icon)', 
+                size: 24, 
+                strokeWidth: 2.25 
+            },
+            iconHuge: { 
+                icon: 'hgi hgi-stroke hgi-dollar-02',
+                style: {
+                    'font-size':' 23px', 
+                    'color': 'var(--color-sidebar)', 
+                    'font-weight': '500'
+                }
             }
         }
     },
     detailIcon: {
-        lucideIcon: { icon: Info, color: 'var(--color-icon)', size: 20, strokeWidth: 1.5 },
-        hugeIcon: { 
-            icon: 'hgi hgi-stroke hgi-information-circle',
-            style: {
-                'font-size':' 23px', 
-                'color': 'var(--color-icon)', 
-                'font-weight': '500'
-            }
-        },
+        icons: {
+            iconLucide: { 
+                icon: Info, 
+                color: 'var(--color-icon)', 
+                size: 20, 
+                strokeWidth: 1.5 
+            },
+            iconHuge: { 
+                icon: 'hgi hgi-stroke hgi-information-circle',
+                style: {
+                    'font-size':' 23px', 
+                    'color': 'var(--color-icon)', 
+                    'font-weight': '500'
+                }
+            },          
+        }
+    },
+    badgeIcon: {
+        icons: {
+            iconLucide: { 
+                icon: Info, 
+                color: 'var(--color-icon)', 
+                size: 20, 
+                strokeWidth: 1.5 
+            },
+            iconHuge: { 
+                icon: 'hgi hgi-stroke hgi-information-circle',
+                style: {
+                    'font-size':' 23px', 
+                    'color': 'var(--color-icon)', 
+                    'font-weight': '500'
+                }
+            },          
+        }
     },
     name: "Total Profit",
     metricValue: '49,000',
@@ -38,27 +70,59 @@ export const totalProfit: IMetricCardConfigItems = {
 }
 
 export const totalUsers: IMetricCardConfigItems = {
-    icon: {
-        lucideIcon: { icon: UserRound, color: 'var(--color-icon)', size: 24, strokeWidth: 2.25 },
-        hugeIcon: { 
-            icon: 'hgi hgi-stroke hgi-user-group',
-            style: {
-                'font-size':' 23px', 
-                'color': 'var(--color-primary)', 
-                'font-weight': '500'
+    mainIcon: {
+        icons: {
+            iconLucide: { 
+                icon: UserRound, 
+                color: 'var(--color-icon)', 
+                size: 24, 
+                strokeWidth: 2.25 
+            },
+            iconHuge: { 
+                icon: 'hgi hgi-stroke hgi-user-group',
+                style: {
+                    'font-size':' 23px', 
+                    'color': 'var(--color-primary)', 
+                    'font-weight': '500'
+                }
             }
         }
     },
     detailIcon: {
-        lucideIcon: { icon: Info, color: 'var(--color-icon)', size: 20, strokeWidth: 1.5 },
-        hugeIcon: { 
-            icon: 'hgi hgi-stroke hgi-information-circle',
-            style: {
-                'font-size':' 23px', 
-                'color': 'var(--color-icon)', 
-                'font-weight': '500'
-            }
-        },
+        icons: {
+            iconLucide: { 
+                icon: Info, 
+                color: 'var(--color-icon)', 
+                size: 20, 
+                strokeWidth: 1.5 
+            },
+            iconHuge: { 
+                icon: 'hgi hgi-stroke hgi-information-circle',
+                style: {
+                    'font-size':' 23px', 
+                    'color': 'var(--color-icon)', 
+                    'font-weight': '500'
+                }
+            },
+        }
+    },
+    badgeIcon: {
+        icons: {
+            iconLucide: { 
+                icon: Info, 
+                color: 'var(--color-icon)', 
+                size: 20, 
+                strokeWidth: 1.5 
+            },
+            iconHuge: { 
+                icon: 'hgi hgi-stroke hgi-information-circle',
+                style: {
+                    'font-size':' 23px', 
+                    'color': 'var(--color-icon)', 
+                    'font-weight': '500'
+                }
+            },          
+        }
     },
     name: "Total Client",
     metricValue: '4,700',
@@ -67,27 +131,59 @@ export const totalUsers: IMetricCardConfigItems = {
 }
 
 export const totalSuccessTransaction: IMetricCardConfigItems = {
-    icon: {
-        lucideIcon: { icon: CheckCheck, color: 'var(--color-icon)', size: 24, strokeWidth: 2.25 },
-        hugeIcon: { 
-            icon: 'hgi hgi-stroke hgi-package-delivered',
-            style: {
-                'font-size':' 23px', 
-                'color': 'var(--color-primary)', 
-                'font-weight': '500'
+    mainIcon: {
+        icons: {
+            iconLucide: { 
+                icon: CheckCheck, 
+                color: 'var(--color-icon)', 
+                size: 24, 
+                strokeWidth: 2.25 
+            },
+            iconHuge: { 
+                icon: 'hgi hgi-stroke hgi-package-delivered',
+                style: {
+                    'font-size':' 23px', 
+                    'color': 'var(--color-primary)', 
+                    'font-weight': '500'
+                }
             }
         }
     },
     detailIcon: {
-        lucideIcon: { icon: Info, color: 'var(--color-icon)', size: 20, strokeWidth: 1.5 },
-        hugeIcon: { 
-            icon: 'hgi hgi-stroke hgi-information-circle',
-            style: {
-                'font-size':' 23px', 
-                'color': 'var(--color-icon)', 
-                'font-weight': '500'
-            }
-        },
+        icons: {
+            iconLucide: { 
+                icon: Info, 
+                color: 'var(--color-icon)', 
+                size: 20, 
+                strokeWidth: 1.5 
+            },
+            iconHuge: { 
+                icon: 'hgi hgi-stroke hgi-information-circle',
+                style: {
+                    'font-size':' 23px', 
+                    'color': 'var(--color-icon)', 
+                    'font-weight': '500'
+                }
+            },
+        }
+    },
+    badgeIcon: {
+        icons: {
+            iconLucide: { 
+                icon: Info, 
+                color: 'var(--color-icon)', 
+                size: 20, 
+                strokeWidth: 1.5 
+            },
+            iconHuge: { 
+                icon: 'hgi hgi-stroke hgi-information-circle',
+                style: {
+                    'font-size':' 23px', 
+                    'color': 'var(--color-icon)', 
+                    'font-weight': '500'
+                }
+            },          
+        }
     },
     name: "Total Sales",
     metricValue: '12,000',
@@ -96,27 +192,59 @@ export const totalSuccessTransaction: IMetricCardConfigItems = {
 }
 
 export const totalActiveUsers: IMetricCardConfigItems = {
-    icon: {
-        lucideIcon: { icon: ArchiveRestore, color: 'var(--color-icon)', size: 24, strokeWidth: 2.25 },
-        hugeIcon: { 
-            icon: 'hgi hgi-stroke hgi-id',
-            style: {
-                'font-size':' 23px', 
-                'color': 'var(--color-primary)', 
-                'font-weight': '500'
-            } 
+    mainIcon: {
+        icons: {
+            iconLucide: { 
+                icon: ArchiveRestore, 
+                color: 'var(--color-icon)', 
+                size: 24, 
+                strokeWidth: 2.25 
+            },
+            iconHuge: { 
+                icon: 'hgi hgi-stroke hgi-id',
+                style: {
+                    'font-size':' 23px', 
+                    'color': 'var(--color-primary)', 
+                    'font-weight': '500'
+                } 
+            }
         }
     },
     detailIcon: {
-        lucideIcon: { icon: Info, color: 'var(--color-icon)', size: 20, strokeWidth: 1.5 },
-        hugeIcon: { 
-            icon: 'hgi hgi-stroke hgi-information-circle',
-            style: {
-                'font-size':' 23px', 
-                'color': 'var(--color-icon)', 
-                'font-weight': '500'
-            }
-        },
+        icons: {
+            iconLucide: { 
+                icon: Info, 
+                color: 'var(--color-icon)', 
+                size: 20, 
+                strokeWidth: 1.5 
+            },
+            iconHuge: { 
+                icon: 'hgi hgi-stroke hgi-information-circle',
+                style: {
+                    'font-size':' 23px', 
+                    'color': 'var(--color-icon)', 
+                    'font-weight': '500'
+                }
+            },
+        }
+    },
+    badgeIcon: {
+        icons: {
+            iconLucide: { 
+                icon: Info, 
+                color: 'var(--color-icon)', 
+                size: 20, 
+                strokeWidth: 1.5 
+            },
+            iconHuge: { 
+                icon: 'hgi hgi-stroke hgi-information-circle',
+                style: {
+                    'font-size':' 23px', 
+                    'color': 'var(--color-icon)', 
+                    'font-weight': '500'
+                }
+            },          
+        }
     },
     name: "Total Employees",
     metricValue: '480',
