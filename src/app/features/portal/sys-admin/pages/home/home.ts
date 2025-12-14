@@ -2,7 +2,28 @@ import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { Sidebar } from "@/layout/sidebar/sidebar";
 import { Subscription } from 'rxjs';
 import { RouterStateService } from '@/app/common/service/state/router.state.service';
-import { UiIcons, UiMenu, UiBreadcrumbs, UiCard, UiButton } from "@/ui/index";
+import { 
+  UiIcons, 
+  UiMenu, 
+  UiBreadcrumbs, 
+  UiCard, 
+  UiButton, 
+  IMultiIconConfig, 
+  UiAccordion, 
+  UiAccordionGroup, 
+  UiBadge, 
+  UiButtonGroup, 
+  UiCardGroup, 
+  UiDropdown, 
+  UiInput, 
+  UiInputGroup, 
+  UiMenuGroup, 
+  UiListGroup, 
+  UiListItem, 
+  UiPaginationGroup, 
+  UiTabsGroup, 
+  UiToggleGroup 
+} from "@/ui/index";
 import { 
   totalActiveUsers, 
   totalProfit, 
@@ -25,7 +46,21 @@ import { Navbar, Header } from "@/app/common/layout";
     UiCard,
     Navbar,
     Header,
-    UiButton
+    UiButton,
+    UiAccordion,
+    UiAccordionGroup,
+    UiBadge,
+    UiButtonGroup,
+    UiCardGroup,
+    UiDropdown,
+    UiInput,
+    UiInputGroup,
+    UiMenuGroup,
+    UiListGroup,
+    UiListItem,
+    UiPaginationGroup,
+    UiTabsGroup,
+    UiToggleGroup
 ],
   templateUrl: './home.html',
   styleUrl: './home.scss',
@@ -114,5 +149,83 @@ export class Home extends BasePageComponent implements OnInit, OnDestroy
   // Monthly
   // Yearly
   //============== END OF PROPERTY ===============//
+
+  // Button testing
+  protected readonly btnDefaultIcon: IMultiIconConfig = {
+    icons: {
+      iconLucide: { 
+        icon: AppWindow, 
+        strokeWidth: 1.5, 
+        color: 'var(--color-sidebar)', 
+        size: 20
+      },
+      iconHuge: { 
+        icon: "hgi hgi-stroke hgi-information-circle", 
+        style: {
+          'font-size':' 20px', 
+          'color': 'var(--color-sidebar)', 
+          'font-weight': '500'
+        }
+      }
+    },
+  }
+
+  protected readonly btnSubmitIcon: IMultiIconConfig = {
+    icons: {
+      iconLucide: { 
+        icon: AppWindow, 
+        strokeWidth: 1.5, 
+        color: 'var(--color-icon)', 
+        size: 20 
+      },
+      iconHuge: { 
+        icon: "hgi hgi-stroke hgi-upload-circle-01", 
+        style: {
+          'font-size':' 20px', 
+          'color': 'var(--color-sidebar)', 
+          'font-weight': '500'
+        }
+      }
+    },
+  }
+
+  protected readonly btnDangerIcon: IMultiIconConfig = {
+    icons: {
+      iconLucide: { 
+        icon: AppWindow, 
+        strokeWidth: 1.5, 
+        color: 'var(--color-icon)', 
+        size: 20 
+      },
+      iconHuge: { 
+        icon: "hgi hgi-stroke hgi-delete-02", 
+        style: {
+          'font-size':' 20px', 
+          'color': 'var(--color-sidebar)', 
+          'font-weight': '500'
+        }
+      }
+    },
+  }
+
+  protected readonly btnWarnIcon: IMultiIconConfig = {
+    icons: {
+      iconLucide: { 
+        icon: AppWindow, 
+        strokeWidth: 1.5, 
+        color: 'var(--color-icon)', 
+        size: 20 
+      },
+      iconHuge: { 
+        icon: "hgi hgi-stroke hgi-alert-02", 
+        style: {
+          'font-size':' 20px', 
+          'color': 'var(--color-sidebar)', 
+          'font-weight': '500'
+        }
+      }
+    },
+  }
+
 
 }

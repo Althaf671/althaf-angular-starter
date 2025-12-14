@@ -11,7 +11,7 @@
     inset 0 0 20px rgba(255, 255, 255, 0.15),
     0 0 50px rgba(255, 255, 255, 0.25);
 
-    .header {
+    header {
         position: relative;
         width: 100%;
         min-height: 40px;
@@ -71,7 +71,7 @@
         }
     }
 
-    .footer {
+    footer {
         display: flex;
         justify-content: flex-start;
         align-items: center;

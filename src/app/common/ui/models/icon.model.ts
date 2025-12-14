@@ -12,3 +12,10 @@ export interface IIconStyleConfig {
     'color': string;
     'font-weight': string;
 }
+
+export interface IMultiIconConfig {
+    icons: {
+        iconLucide: IIconItemsConfig;
+        iconHuge: { icon: string; style?: IIconStyleConfig }
+    }
+}

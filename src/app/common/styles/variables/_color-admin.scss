@@ -7,6 +7,16 @@
     --color-text: #6c6b6b;
     --color-border: #3c3c431f;
     --color-icon: #6c6b6b;
+
+    /* components color */
+    --color-info: #282828;
+    --color-info-border: #282828;
+    --color-warn: #FFC107;
+    --color-warn-border: #FFC107;
+    --color-danger: #e62222;
+    --color-danger-border: #e62222;
+    --color-success: #18b946;
+    --color-success-border: #18b946;
 }
 
 :host-context(.app-layout-dark) {

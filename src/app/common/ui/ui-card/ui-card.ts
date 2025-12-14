@@ -2,10 +2,11 @@ import { Component, inject, Input } from '@angular/core';
 import { IMetricCardConfigItems, INotificationCardConfigItems } from '../models/card.model';
 import { UiIcons } from "../ui-icons/ui-icons";
 import { IconProviderService } from '../../service/ui/icon.provider.sevice';
+import { CalendarTooltipDirective } from "angular-calendar";
 
 @Component({
   selector: 'app-ui-card',
-  imports: [UiIcons],
+  imports: [UiIcons, CalendarTooltipDirective],
   templateUrl: './ui-card.html',
   styleUrl: './ui-card.scss',
 })

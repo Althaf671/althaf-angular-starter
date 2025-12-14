@@ -1,6 +1,6 @@
 @if (cardMetricConfig) {
-    <div class="card-metric">
-        <div class="header">
+    <article class="card-metric">
+        <header>
             @if (isFirstChild) {
                 <span class="icon-wrapper-dark">
                     <app-ui-icons 
@@ -29,16 +29,16 @@
                     [iconItems]="cardMetricConfig.detailIcon.lucideIcon"
                 /> 
             </span>
-        </div>
+        </header>
         <div class="body">
             <span class="metric-symbol">{{ cardMetricConfig.valueSymbol }}</span>
-            <span class="metric-value">{{ cardMetricConfig.metricValue }}</span>
+            <output class="metric-value">{{ cardMetricConfig.metricValue }}</output>
         </div>
-        <div class="footer">
+        <footer>
             <span class="percentage-rate">{{ cardMetricConfig.percentageRate }}</span>
             <p>{{ cardMetricConfig.infoText }}</p>
-        </div>
-    </div>
+        </footer>
+    </article>
 }
 
 @switch (cardNotificationConfig?.level) {

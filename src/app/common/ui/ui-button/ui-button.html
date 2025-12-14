@@ -1,40 +1,59 @@
-@if (buttonItems.type === "button") {
-    <button
-        class="button-default"
-        [class]="'-' + buttonItems.level"
-        [style]="buttonStyle" 
-    >
-        @switch (buttonItems.variant) {
+@if (type === "button") {
+    <button type="button" [class]="'-' + level" [style]="buttonStyle">
+        @switch (variant) {
             @case ("text-icon") {
                 <app-ui-icons  
                     [provider]="setIcon"
-                    [iconClass]="buttonItems.icon.iconHuge.icon"
-                    [iconItems]="buttonItems.icon.iconLucide"
-                    [iconStyle]="buttonItems.icon.iconHuge.style"
+                    [iconClass]="icon.icons.iconHuge.icon"
+                    [iconItems]="icon.icons.iconLucide"
+                    [iconStyle]="icon.icons.iconHuge.style"
                 />
-                <p>{{ buttonItems.name }}</p>
+                <p>{{ name }}</p>
             }
             @case ("icon-only") {
                 <app-ui-icons  
                     [provider]="setIcon"
-                    [iconClass]="buttonItems.icon.iconHuge.icon"
-                    [iconItems]="buttonItems.icon.iconLucide"
-                    [iconStyle]="buttonItems.icon.iconHuge.style"
+                    [iconClass]="icon.icons.iconHuge.icon"
+                    [iconItems]="icon.icons.iconLucide"
+                    [iconStyle]="icon.icons.iconHuge.style"
                 />
             }
             @case ("text-only") {
-                <p>{{ buttonItems.name }}</p>
+                <p>{{ name }}</p>
             }
             @default {
-                <p>{{ buttonItems.name }}</p>
+                <p>{{ name }}</p>
             }
         }
     </button>
 }
 
-@if (buttonItems.type === "submit") {
-    <button
-    >
-
+@if (type === "submit") {
+    <button type="submit" [class]="'-' + level" [style]="buttonStyle">
+        @switch (variant) {
+            @case ("text-icon") {
+                <app-ui-icons  
+                    [provider]="setIcon"
+                    [iconClass]="icon.icons.iconHuge.icon"
+                    [iconItems]="icon.icons.iconLucide"
+                    [iconStyle]="icon.icons.iconHuge.style"
+                />
+                <p>{{ name }}</p>
+            }
+            @case ("icon-only") {
+                <app-ui-icons  
+                    [provider]="setIcon"
+                    [iconClass]="icon.icons.iconHuge.icon"
+                    [iconItems]="icon.icons.iconLucide"
+                    [iconStyle]="icon.icons.iconHuge.style"
+                />
+            }
+            @case ("text-only") {
+                <p>{{ name }}</p>
+            }
+            @default {
+                <p>{{ name }}</p>
+            }
+        }
     </button>
 }
