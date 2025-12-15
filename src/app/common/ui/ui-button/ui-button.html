@@ -1,1 +1,59 @@
-<p>ui-button works!</p>
+@if (type === "button") {
+    <button type="button" [class]="'-' + level" [style]="buttonStyle">
+        @switch (variant) {
+            @case ("text-icon") {
+                <app-ui-icons  
+                    [provider]="setIcon"
+                    [iconClass]="icon.icons.iconHuge.icon"
+                    [iconItems]="icon.icons.iconLucide"
+                    [iconStyle]="icon.icons.iconHuge.style"
+                />
+                <p>{{ name }}</p>
+            }
+            @case ("icon-only") {
+                <app-ui-icons  
+                    [provider]="setIcon"
+                    [iconClass]="icon.icons.iconHuge.icon"
+                    [iconItems]="icon.icons.iconLucide"
+                    [iconStyle]="icon.icons.iconHuge.style"
+                />
+            }
+            @case ("text-only") {
+                <p>{{ name }}</p>
+            }
+            @default {
+                <p>{{ name }}</p>
+            }
+        }
+    </button>
+}
+
+@if (type === "submit") {
+    <button type="submit" [class]="'-' + level" [style]="buttonStyle">
+        @switch (variant) {
+            @case ("text-icon") {
+                <app-ui-icons  
+                    [provider]="setIcon"
+                    [iconClass]="icon.icons.iconHuge.icon"
+                    [iconItems]="icon.icons.iconLucide"
+                    [iconStyle]="icon.icons.iconHuge.style"
+                />
+                <p>{{ name }}</p>
+            }
+            @case ("icon-only") {
+                <app-ui-icons  
+                    [provider]="setIcon"
+                    [iconClass]="icon.icons.iconHuge.icon"
+                    [iconItems]="icon.icons.iconLucide"
+                    [iconStyle]="icon.icons.iconHuge.style"
+                />
+            }
+            @case ("text-only") {
+                <p>{{ name }}</p>
+            }
+            @default {
+                <p>{{ name }}</p>
+            }
+        }
+    </button>
+}

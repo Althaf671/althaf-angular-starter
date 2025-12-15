@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Sidebar } from "../../../../../common/layout/sidebar/sidebar";
+import { BasePageComponent } from '../../common/base-page-component';
 
 @Component({
   selector: 'app-finance',
@@ -7,6 +8,7 @@ import { Sidebar } from "../../../../../common/layout/sidebar/sidebar";
   templateUrl: './finance.html',
   styleUrl: './finance.scss',
 })
-export class Finance {
+export class Finance extends BasePageComponent
+{
 
 }

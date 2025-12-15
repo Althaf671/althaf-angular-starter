@@ -2,11 +2,13 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UiBreadcrumbs } from './ui-breadcrumbs';
 
-describe('UiBreadcrumbs', () => {
+describe('UiBreadcrumbs', () => 
+{
   let component: UiBreadcrumbs;
   let fixture: ComponentFixture<UiBreadcrumbs>;
 
-  beforeEach(async () => {
+  beforeEach(async () => 
+  {
     await TestBed.configureTestingModule({
       imports: [UiBreadcrumbs]
     })
@@ -17,7 +19,8 @@ describe('UiBreadcrumbs', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create', () => 
+  {
     expect(component).toBeTruthy();
   });
 });

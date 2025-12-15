@@ -1,1 +1,26 @@
-<p>header works!</p>
+<header>
+    <div class="left-content">
+        <h2>Company Dashboard</h2>
+        <app-ui-breadcrumbs />
+    </div>
+    <div class="right-content">
+        <button>
+            <app-ui-icons 
+                [provider]="setIcon"
+                [iconItems]="MenuIcons"
+                [iconClass]="'hgi hgi-stroke hgi-global-refresh'"
+                [iconStyle]="{ 'color': 'var(--color-icon)', 'font-size': '21px', 'font-weight': '500' }"
+            />
+        </button>
+        <button>
+        <span>Monthly</span>
+        <app-ui-icons 
+            [provider]="setIcon"
+            [iconItems]="MenuIcons"
+            [iconClass]="'hgi hgi-stroke hgi-unfold-more'"
+            [iconStyle]="{ 'color': 'white', 'font-size': '21px', 'font-weight': '500' }"
+            style="margin-top: 1px;"
+            />
+        </button>
+    </div>
+</header>

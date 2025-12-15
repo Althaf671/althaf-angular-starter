@@ -2,11 +2,13 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UiTabs } from './ui-tabs';
 
-describe('UiTabs', () => {
+describe('UiTabs', () => 
+{
   let component: UiTabs;
   let fixture: ComponentFixture<UiTabs>;
 
-  beforeEach(async () => {
+  beforeEach(async () => 
+  {
     await TestBed.configureTestingModule({
       imports: [UiTabs]
     })
@@ -17,7 +19,8 @@ describe('UiTabs', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create', () => 
+  {
     expect(component).toBeTruthy();
   });
 });

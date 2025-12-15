@@ -1,8 +1,19 @@
-<lucide-icon
-    [img]="icon"
-    [color]="color"
-    [strokeWidth]="strokeW"
-    [size]="size"
-    class="icon"
->
-</lucide-icon>
+@switch (provider) {
+    @case ("hugeIcon") {
+        <i 
+            [class]="iconClass"
+            [style]="iconStyle"
+        ></i>
+    }
+    @case ("lucideIcon") {
+        <lucide-icon
+            [img]="iconItems.icon"
+            [color]="iconItems.color"
+            [strokeWidth]="iconItems.strokeWidth"
+            [size]="iconItems.size"
+        >
+        </lucide-icon>  
+    }
+}
+
+<!-- Banyak yang perlu direafctor -->

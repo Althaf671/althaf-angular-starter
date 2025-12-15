@@ -1,5 +1,5 @@
 
 
-export type THeaderItemsConfig = {
+export interface THeaderItemsConfig {
     title: string;
 }

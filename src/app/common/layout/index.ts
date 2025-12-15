@@ -6,3 +6,4 @@ export { Slider } from './slider/slider';
 
 export type { THeaderItemsConfig } from './models/header.model';
 export type { TSidebarMenuItemsConfig } from './models/sidebar.model';
+export type { INavbarItemsConfig } from './models/navbar.model';

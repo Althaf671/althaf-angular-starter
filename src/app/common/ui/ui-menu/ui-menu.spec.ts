@@ -2,11 +2,13 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UiMenu } from './ui-menu';
 
-describe('UiMenu', () => {
+describe('UiMenu', () => 
+{
   let component: UiMenu;
   let fixture: ComponentFixture<UiMenu>;
 
-  beforeEach(async () => {
+  beforeEach(async () => 
+  {
     await TestBed.configureTestingModule({
       imports: [UiMenu]
     })
@@ -17,7 +19,8 @@ describe('UiMenu', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create', () => 
+  {
     expect(component).toBeTruthy();
   });
 });

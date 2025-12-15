@@ -1,57 +1,152 @@
 <main class="home__page">
 
-    <!-- Need that fullscreen feature -->
-
     <!-- Sidebar -->
     <app-sidebar 
-        [portalName]="sidebarHeaderItems.portalName" 
-        [email]="sidebarHeaderItems.email" 
-        [primaryMenuItems]="sidebarPrimaryMenuItems"
-        [secondaryMenuItems]="sidebarSecondaryMenuItems"
-        [thirdMenuItems]="sidebarThirdMenuItems"
+        [portalName]="pageLayoutConfig.sidebarConfigs.headerItems.portalName" 
+        [email]="pageLayoutConfig.sidebarConfigs.headerItems.email" 
+        [primaryMenuItems]="pageLayoutConfig.sidebarConfigs.primaryItems"
+        [secondaryMenuItems]="pageLayoutConfig.sidebarConfigs.secondaryItems"
+        [thirdMenuItems]="pageLayoutConfig.sidebarConfigs.thirdItems"
     />
 
     <!-- Body -->
     <div class="home-content">
 
-        <!-- Header -->
-        <div role="banner" class="header">
-            <div class="page-title">
-                <h2>Overview</h2>
-                <app-ui-breadcrumbs />
-            </div>
-            <div role="group" class="button-group">
-                <button>
-                    <app-ui-icons [icon]="NotificationIcon" [color]="'var(--color-icon)'" [size]="23" [strokeW]="1.5"></app-ui-icons>
-                </button>
-                <app-ui-menu [menuItems]="menuItems" />
-            </div>
-        </div>
+        @if (isHomePage) 
+        {
+            <!-- Navbar --> 
+            <app-navbar 
+                [navbarItem]="pageLayoutConfig.navbarConfig" 
+                [menuItems]="pageLayoutConfig.menuConfig" 
+            />
 
-        <!-- Grid container -->
-        <div role="grid" class="grid-container">
+            <!-- Header --> 
+            <app-header />
 
-            <!-- Metric panel -->
-            <div class="metric-panel" style="grid-area: metric-panel;">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nesciunt, et dolorem tenetur rem doloribus veritatis adipisci voluptatibus? Consequuntur facere debitis voluptas suscipit velit autem distinctio nesciunt quisquam vero omnis!</p>
+            <!-- Content  -->
+            <div class="main-content">
+
+                <!-- Metric panel -->
+                <section class="metrics">
+                    <app-ui-card 
+                        [isFirstChild]="true" 
+                        [cardMetricConfig]="totalProfit" 
+                        [cardBadgeIconItems]="totalProfit.badgeIcon" 
+                    />
+                    <app-ui-card 
+                        [cardMetricConfig]="totalSuccessTransaction" 
+                        [cardBadgeIconItems]="totalSuccessTransaction.badgeIcon" 
+                    />
+                    <app-ui-card 
+                        [cardMetricConfig]="totalUsers" 
+                        [cardBadgeIconItems]="totalUsers.badgeIcon" 
+                    />
+                    <app-ui-card 
+                        [cardMetricConfig]="totalActiveUsers" 
+                        [cardBadgeIconItems]="totalActiveUsers.badgeIcon" 
+                    />
+                </section>
+
+                <!-- Statistic panel -->
+                <section class="statistic">
+                    <div class="title">
+                        <h3>Overall Growth <span>+16%</span> </h3>
+                        <div class="filter-container">
+                            <div class="toggle-timeline">
+                                <app-ui-button
+                                    [type]="'button'" 
+                                    [level]="'ghost'"
+                                    [variant]="'text-only'"
+                                    [name]="'Ghost'"
+                                />
+                                <app-ui-button
+                                    [type]="'button'" 
+                                    [level]="'outline'"
+                                    [variant]="'text-only'"
+                                    [name]="'Outline'"
+                                />
+                                <app-ui-button
+                                    [type]="'button'" 
+                                    [icon]="btnDefaultIcon"
+                                    [level]="'info'"
+                                    [variant]="'text-icon'"
+                                    [name]="'Default'"
+                                />
+                               <app-ui-button
+                                    [type]="'submit'" 
+                                    [icon]="btnSubmitIcon"
+                                    [level]="'success'"
+                                    [variant]="'text-icon'"
+                                    [name]="'Submit'"
+                                />
+                               <app-ui-button
+                                    [type]="'submit'" 
+                                    [icon]="btnDangerIcon"
+                                    [level]="'danger'"
+                                    [variant]="'text-icon'"
+                                    [name]="'Delete'"
+                                />
+                               <app-ui-button
+                                    [type]="'submit'" 
+                                    [icon]="btnWarnIcon"
+                                    [level]="'warn'"
+                                    [variant]="'text-icon'"
+                                    [name]="'Warning'"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-container">
+                        <div class="overall-value">
+                            $4,190
+                        </div>
+                        <div class="legends">
+                            <span>Profit</span>
+                            <span>Sales</span>
+                            <span>Client</span>
+                            <span>Employee</span>
+                        </div>
+                    </div>
+                    <div class="inner-container">
+                        <div class="chart-container">
+                            <div class="header">
+
+                            </div>
+                            <app-ui-accordion />
+                            <app-ui-accordion-group />
+                            <app-ui-badge />
+                            <app-ui-button-group />
+                            <app-ui-card-group />
+                            <app-ui-dropdown />
+                            <app-ui-input />
+                            <app-ui-input-group />
+                            <app-ui-menu-group />
+                            <app-ui-list-group />
+                            <app-ui-list-item />
+                            <app-ui-pagination-group />
+                            <app-ui-tabs-group />
+                            <app-ui-toggle-group />
+                        </div>
+                        <div class="summary-container">
+                            <div class="header">Overview</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="overall">
+                    <div class="pie-chart"></div>
+                    <div class="top-employee"></div>
+                    <div class="priority-task"></div>
+                </section>
             </div>
+        }
 
-            <!-- Bar Chart -->
-            <div class="bar-chart-container" style="grid-area: bar-chart;">
-                <p>Bar Chart</p>
-            </div>
-
-            <!-- Todo list -->
-            <div class="todo-list-container" style="grid-area: todo;">
-                <p>Todo List</p>
-            </div>
-
-        </div>
+        <!-- <router-outlet></router-outlet> -->
 
         <!-- Footer -->
-        <div class="footer">
+        <!-- <div class="footer">
             <p>Footer</p>
-        </div>
+        </div> -->
 
     </div>
 

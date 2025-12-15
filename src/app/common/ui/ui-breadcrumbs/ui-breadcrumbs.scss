@@ -3,20 +3,45 @@
 
 .breadcrumbs {
     display: flex;
+    flex-direction: row;
     width: fit-content;
+    min-height: 25px;
+
+    ol {
+        display: flex;
+        flex-direction: row;
+        gap: .15em;
+    }
 
     li {
+        display: flex;
+        flex-direction: row;
         list-style: none;
         color: var(--color-text);
         opacity: 60%;
-    }
+        width: fit-content;
 
-    a {
-        cursor: pointer;
-        text-decoration: underline;
-    }
+        a {
+            text-decoration: none;
+            color: var(--color-text);
+            letter-spacing: 0.25px;
+            
+            span {
+                cursor: pointer;
+                font-weight: 500;
+                opacity: 80%;
+            }
+        }
 
-    span {
-        cursor: default;
+        span {
+            cursor: default;
+            opacity: 100%;
+            letter-spacing: 0.25px;
+            color: var(--color-primary);
+        }
+
+        .icon {
+            margin-top: 0px;
+        }
     }
 }

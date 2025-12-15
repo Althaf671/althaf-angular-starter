@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './ui-table.html',
   styleUrl: './ui-table.scss',
 })
-export class UiTable {
+export class UiTable 
+{
 
 }

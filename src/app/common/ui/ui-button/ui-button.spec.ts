@@ -2,11 +2,13 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UiButton } from './ui-button';
 
-describe('UiButton', () => {
+describe('UiButton', () => 
+{
   let component: UiButton;
   let fixture: ComponentFixture<UiButton>;
 
-  beforeEach(async () => {
+  beforeEach(async () => 
+  {
     await TestBed.configureTestingModule({
       imports: [UiButton]
     })
@@ -17,7 +19,8 @@ describe('UiButton', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create', () => 
+  {
     expect(component).toBeTruthy();
   });
 });

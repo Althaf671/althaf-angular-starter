@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './ui-tabs.html',
   styleUrl: './ui-tabs.scss',
 })
-export class UiTabs {
+export class UiTabs 
+{
 
 }

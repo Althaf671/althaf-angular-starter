@@ -1,5 +1,5 @@
 <aside 
-    [class.open]="sidebar.isOpen()" 
+    [class.open]="!sidebar.isOpen()" 
     id="nav"
 >
 
@@ -19,10 +19,9 @@
                 </div>
                 <button (click)="toggle()" id="toggle-btn">
                     <app-ui-icons 
-                        [icon]="MenuIcons"
-                        color="var(--color-icon)"
-                        [size]="23"
-                        [strokeW]="1.5"
+                        [provider]="setIcon"
+                        [iconItems]="MenuIcons"
+                        [iconClass]="'hgi hgi-stroke hgi-sidebar-left'"
                     />
                 </button>
             </li>
@@ -34,14 +33,13 @@
                 <li>
                     <a 
                         [routerLink]="item.route"
-                        routerLinkActive="active"
-                        [routerLinkActiveOptions]="{ exact: true }"                   
+                        routerLinkActive="active"                 
                     >
                         <app-ui-icons 
-                            [icon]="item.icon.icon" 
-                            [color]="item.icon.color" 
-                            [size]="item.icon.size" 
-                            [strokeW]="item.icon.strokeWidth" 
+                            [provider]="setIcon"
+                            [iconItems]="item.iconLucide"
+                            [iconClass]="item.iconHuge?.icon"
+                            [iconStyle]="item.iconHuge?.style"
                         />
                         <span>{{ item.name }}</span>
                     </a>
@@ -50,20 +48,19 @@
         </ul>
 
         <!-- Secondary navigation-->
-        <span class="section-title">Utilities</span>
+        <span class="section-title">Workspace</span>
         <ul>
             @for (item of secondaryMenuItems; track $index) {
                 <li>
                     <a 
                         [routerLink]="item.route"
-                        routerLinkActive="active"
-                        [routerLinkActiveOptions]="{ exact: true }"                   
+                        routerLinkActive="active"                 
                     >
                         <app-ui-icons 
-                            [icon]="item.icon.icon" 
-                            [color]="item.icon.color" 
-                            [size]="item.icon.size" 
-                            [strokeW]="item.icon.strokeWidth" 
+                            [provider]="setIcon"
+                            [iconItems]="item.iconLucide"
+                            [iconClass]="item.iconHuge?.icon"
+                            [iconStyle]="item.iconHuge?.style"
                         />
                         <span>{{ item.name }}</span>
                     </a>
@@ -78,14 +75,13 @@
                 <li>
                     <a 
                         [routerLink]="item.route"
-                        routerLinkActive="active"
-                        [routerLinkActiveOptions]="{ exact: true }"                   
+                        routerLinkActive="active"                 
                     >
                         <app-ui-icons 
-                            [icon]="item.icon.icon" 
-                            [color]="item.icon.color" 
-                            [size]="item.icon.size" 
-                            [strokeW]="item.icon.strokeWidth" 
+                            [provider]="setIcon"
+                            [iconItems]="item.iconLucide"
+                            [iconClass]="item.iconHuge?.icon"
+                            [iconStyle]="item.iconHuge?.style"
                         />
                         <span>{{ item.name }}</span>
                     </a>
@@ -99,13 +95,16 @@
     <div class="logout-container">
         <a routerLink="/dashboard/administration/setting">
             <app-ui-icons 
-                [icon]="LogoutIcon" [color]="'var(--color-sidebar)'" [size]="23" [strokeW]="1.5" 
+                [provider]="setIcon"
+                [iconItems]="LogoutIcon"
+                [iconClass]="'hgi hgi-stroke hgi-door-01'"
+                [iconStyle]="{ 'color': 'white', 'font-size': '24px', 'font-weight': '500' }"
             />
             <span>Logout</span>
         </a>
     </div>
 
     <!-- Overlay for mobile -->
-    <div class="overlay" [class.open]="!sidebar.isOpen()"></div>
+    <div class="overlay" [class.open]="sidebar.isOpen()"></div>
     
 </aside>

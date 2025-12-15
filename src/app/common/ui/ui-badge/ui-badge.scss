@@ -1,2 +1,7 @@
 @use '../../styles/variables/index' as *;
 @use '../../styles/utilities/index' as *;
+
+span {
+    display: flex;
+    border: 1px solid black;
+}

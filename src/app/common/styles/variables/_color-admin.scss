@@ -1,12 +1,22 @@
 /* Admin colors */
 :host-context(.app-layout) {
-    --color-primary: #1d1d1f;
-    --color-secondary: #f5f5f7;
+    --color-primary: #282828;
+    --color-secondary: #f8f9fa;
     --color-sidebar: #ffffff;
     --color-accent: #0066cc;
-    --color-text: #242528;
+    --color-text: #6c6b6b;
     --color-border: #3c3c431f;
-    --color-icon: #64748b;
+    --color-icon: #6c6b6b;
+
+    /* components color */
+    --color-info: #282828;
+    --color-info-border: #282828;
+    --color-warn: #FFC107;
+    --color-warn-border: #FFC107;
+    --color-danger: #e62222;
+    --color-danger-border: #e62222;
+    --color-success: #18b946;
+    --color-success-border: #18b946;
 }
 
 :host-context(.app-layout-dark) {

@@ -2,11 +2,13 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Slider } from './slider';
 
-describe('Slider', () => {
+describe('Slider', () => 
+{
   let component: Slider;
   let fixture: ComponentFixture<Slider>;
 
-  beforeEach(async () => {
+  beforeEach(async () => 
+  {
     await TestBed.configureTestingModule({
       imports: [Slider]
     })
@@ -17,7 +19,8 @@ describe('Slider', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create', () => 
+  {
     expect(component).toBeTruthy();
   });
 });

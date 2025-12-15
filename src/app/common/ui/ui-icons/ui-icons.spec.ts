@@ -2,11 +2,13 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UiIcons } from './ui-icons';
 
-describe('UiIcons', () => {
+describe('UiIcons', () => 
+{
   let component: UiIcons;
   let fixture: ComponentFixture<UiIcons>;
 
-  beforeEach(async () => {
+  beforeEach(async () => 
+  {
     await TestBed.configureTestingModule({
       imports: [UiIcons]
     })
@@ -17,7 +19,8 @@ describe('UiIcons', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create', () => 
+  {
     expect(component).toBeTruthy();
   });
 });

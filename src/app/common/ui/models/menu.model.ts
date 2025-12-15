@@ -1,8 +1,8 @@
-import { UiIcons } from "../ui-icons/ui-icons";
+import { IIconItemsConfig } from "./icon.model";
 
-export type TMenuItemsConfig = {
+export interface IMenuItemsConfig {
     route?: string;
-    icon: any;
+    icon: IIconItemsConfig;
     text: string;
     action?: () => void;
-}[]
+};

@@ -1,1 +1,33 @@
-<p>navbar works!</p>
+<div class="navbar-wrapper">
+    <nav>
+        <div class="inner-navbar">
+            <ul>
+                @for (item of navbarItem; track $index) {
+                    <li>
+                        <a 
+                            [routerLink]="item.route"
+                            [routerLinkActive]="'active-link'"
+                            [routerLinkActiveOptions]="{ exact: true }"
+                        >
+                            <app-ui-icons 
+                                [provider]="setIcon"
+                                [iconItems]="item.iconLucide"
+                                [iconStyle]="item.iconHuge.style"
+                                [iconClass]="item.iconHuge.icon"
+                            />
+                            <span>{{ item.name }}</span>
+                        </a>
+                    </li>
+                }
+            </ul>
+            <div class="notification-and-menu-container">
+                <app-ui-icons 
+                    [provider]="setIcon"
+                    [iconItems]="NotificationIcon"
+                    [iconClass]="'hgi hgi-stroke hgi-notification-01'"
+                />
+                <app-ui-menu [menuItems]="menuItems" />
+            </div>
+        </div>
+    </nav>
+</div>

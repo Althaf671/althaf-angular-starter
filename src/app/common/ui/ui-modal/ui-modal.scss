@@ -1,2 +1,41 @@
 @use '../../styles/variables/index' as *;
 @use '../../styles/utilities/index' as *;
+
+.modal-info {
+    position: absolute;
+    width: 100vw;
+    height: 100dvh;
+}
+
+.inner-modal {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    min-width: 400px;
+    min-height: 350px;
+    max-height: 400px;
+    max-width: 600px;
+    border: 1px solid black;
+    border-radius: 16px;
+    background: var(--color-sidebar);
+    z-index: 999;
+}
+
+.overlay {
+    position: absolute;
+    width: 100vw;
+    height: 100dvh;
+    filter: blur(2px);
+}
+
+.modal {
+
+    &.-submit, &.-continue {
+
+    }
+
+    &.-delete {
+
+    }
+}

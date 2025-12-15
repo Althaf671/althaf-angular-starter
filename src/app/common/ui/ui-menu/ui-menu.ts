@@ -1,5 +1,5 @@
-import { Component, ElementRef, HostListener, Input, signal } from '@angular/core';
-import { TMenuItemsConfig, UiIcons } from '@/ui/index';
+import { Component, ElementRef, HostListener, Input, signal, inject } from '@angular/core';
+import { IMenuItemsConfig, UiIcons } from '@/ui/index';
 import { RouterLink, RouterLinkActive } from "@angular/router";
 
 @Component({
@@ -8,23 +8,27 @@ import { RouterLink, RouterLinkActive } from "@angular/router";
   templateUrl: './ui-menu.html',
   styleUrl: './ui-menu.scss',
 })
-export class UiMenu {
-  constructor (private elementRef: ElementRef) {};
+export class UiMenu 
+{
+  private elementRef = inject(ElementRef);
 
-  // Toggle menu
-  isOpen = signal(false);
+  // ! Toggle menu
+  public isOpen = signal(false);
 
-  toggleMenu() {
+  toggleMenu() 
+  {
     this.isOpen.update((isOpen) => !isOpen);
   }
 
-  // Menu items
-  @Input() menuItems!: TMenuItemsConfig;
+  // ! Menu items
+  @Input() menuItems: IMenuItemsConfig[] = [];
 
-  // Handle outside click
+  // ! Handle outside click
   @HostListener('document:click', ['$event'])
-  isClicked(event: Event) {
-    if (this.isOpen() && !this.elementRef.nativeElement.contains(event.target)) {
+  isClicked(event: Event) 
+  {
+    if (this.isOpen() && !this.elementRef.nativeElement.contains(event.target)) 
+    {
       this.isOpen.set(false);
     }
   }

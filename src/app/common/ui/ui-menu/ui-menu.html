@@ -4,12 +4,14 @@
     </button>
 </div>
 
-@if (isOpen()) {
+@if (isOpen()) 
+{
     <div 
         [class.open]="isOpen()"
         class="dropdown-menu"
     >
-        @for (item of menuItems; track $index) {
+        @for (item of menuItems; track $index) 
+        {
             <ul>
                 <li>
                     <a 
@@ -17,12 +19,9 @@
                         routerLinkActive="active" 
                         [routerLinkActiveOptions]="{ exact: true }"
                     >
-                        <app-ui-icons 
-                            [icon]="item.icon.icon" 
-                            [size]="item.icon.size"
-                            [strokeW]="item.icon.strokeW"
-                            [color]="item.icon.color"
-                        />
+                        <!-- <app-ui-icons 
+                            [iconItems]="item.icon.icon" 
+                        /> -->
                         <span>{{ item.text }}</span>
                     </a>
                 </li>

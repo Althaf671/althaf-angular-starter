@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './ui-pagination.html',
   styleUrl: './ui-pagination.scss',
 })
-export class UiPagination {
+export class UiPagination 
+{
 
 }

@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './slider.html',
   styleUrl: './slider.scss',
 })
-export class Slider {
+export class Slider 
+{
 
 }
