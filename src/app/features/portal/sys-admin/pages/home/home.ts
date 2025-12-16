@@ -8,7 +8,6 @@ import {
   UiBreadcrumbs, 
   UiCard, 
   UiButton, 
-  IMultiIconConfig, 
   UiAccordion, 
   UiAccordionGroup, 
   UiBadge, 
@@ -31,7 +30,6 @@ import {
   totalUsers 
 } from './common/dashboard-data/metric.data';
 import { BasePageComponent } from '../../common/base-page-component';
-import { IconProviderService } from '@/app/common/service/ui/icon-services/iconProviderService';
 import { AppWindow } from 'lucide-angular';
 import { Navbar, Header } from "@/app/common/layout";
 
@@ -69,8 +67,6 @@ export class Home extends BasePageComponent implements OnInit, OnDestroy
 {
   // Dependecy injections
   private routerState = inject(RouterStateService);
-  private iconService = inject(IconProviderService);
-  protected setIcon = this.iconService.iconProvider();
 
   protected readonly MenuIcons = { 
     icon: AppWindow, 
@@ -151,81 +147,81 @@ export class Home extends BasePageComponent implements OnInit, OnDestroy
   //============== END OF PROPERTY ===============//
 
   // Button testing
-  protected readonly btnDefaultIcon: IMultiIconConfig = {
-    icons: {
-      iconLucide: { 
-        icon: AppWindow, 
-        strokeWidth: 1.5, 
-        color: 'var(--color-sidebar)', 
-        size: 20
-      },
-      iconHuge: { 
-        icon: "hgi hgi-stroke hgi-information-circle", 
-        style: {
-          'font-size':' 20px', 
-          'color': 'var(--color-sidebar)', 
-          'font-weight': '500'
-        }
-      }
-    },
-  }
+  // protected readonly btnDefaultIcon: IMultiIconConfig = {
+  //   icons: {
+  //     iconLucide: { 
+  //       icon: AppWindow, 
+  //       strokeWidth: 1.5, 
+  //       color: 'var(--color-sidebar)', 
+  //       size: 20
+  //     },
+  //     iconHuge: { 
+  //       icon: "hgi hgi-stroke hgi-information-circle", 
+  //       style: {
+  //         'font-size':' 20px', 
+  //         'color': 'var(--color-sidebar)', 
+  //         'font-weight': '500'
+  //       }
+  //     }
+  //   },
+  // }
 
-  protected readonly btnSubmitIcon: IMultiIconConfig = {
-    icons: {
-      iconLucide: { 
-        icon: AppWindow, 
-        strokeWidth: 1.5, 
-        color: 'var(--color-icon)', 
-        size: 20 
-      },
-      iconHuge: { 
-        icon: "hgi hgi-stroke hgi-upload-circle-01", 
-        style: {
-          'font-size':' 20px', 
-          'color': 'var(--color-sidebar)', 
-          'font-weight': '500'
-        }
-      }
-    },
-  }
+  // protected readonly btnSubmitIcon: IMultiIconConfig = {
+  //   icons: {
+  //     iconLucide: { 
+  //       icon: AppWindow, 
+  //       strokeWidth: 1.5, 
+  //       color: 'var(--color-icon)', 
+  //       size: 20 
+  //     },
+  //     iconHuge: { 
+  //       icon: "hgi hgi-stroke hgi-upload-circle-01", 
+  //       style: {
+  //         'font-size':' 20px', 
+  //         'color': 'var(--color-sidebar)', 
+  //         'font-weight': '500'
+  //       }
+  //     }
+  //   },
+  // }
 
-  protected readonly btnDangerIcon: IMultiIconConfig = {
-    icons: {
-      iconLucide: { 
-        icon: AppWindow, 
-        strokeWidth: 1.5, 
-        color: 'var(--color-icon)', 
-        size: 20 
-      },
-      iconHuge: { 
-        icon: "hgi hgi-stroke hgi-delete-02", 
-        style: {
-          'font-size':' 20px', 
-          'color': 'var(--color-sidebar)', 
-          'font-weight': '500'
-        }
-      }
-    },
-  }
+  // protected readonly btnDangerIcon: IMultiIconConfig = {
+  //   icons: {
+  //     iconLucide: { 
+  //       icon: AppWindow, 
+  //       strokeWidth: 1.5, 
+  //       color: 'var(--color-icon)', 
+  //       size: 20 
+  //     },
+  //     iconHuge: { 
+  //       icon: "hgi hgi-stroke hgi-delete-02", 
+  //       style: {
+  //         'font-size':' 20px', 
+  //         'color': 'var(--color-sidebar)', 
+  //         'font-weight': '500'
+  //       }
+  //     }
+  //   },
+  // }
 
-  protected readonly btnWarnIcon: IMultiIconConfig = {
-    icons: {
-      iconLucide: { 
-        icon: AppWindow, 
-        strokeWidth: 1.5, 
-        color: 'var(--color-icon)', 
-        size: 20 
-      },
-      iconHuge: { 
-        icon: "hgi hgi-stroke hgi-alert-02", 
-        style: {
-          'font-size':' 20px', 
-          'color': 'var(--color-sidebar)', 
-          'font-weight': '500'
-        }
-      }
-    },
-  }
+  // protected readonly btnWarnIcon: IMultiIconConfig = {
+  //   icons: {
+  //     iconLucide: { 
+  //       icon: AppWindow, 
+  //       strokeWidth: 1.5, 
+  //       color: 'var(--color-icon)', 
+  //       size: 20 
+  //     },
+  //     iconHuge: { 
+  //       icon: "hgi hgi-stroke hgi-alert-02", 
+  //       style: {
+  //         'font-size':' 20px', 
+  //         'color': 'var(--color-sidebar)', 
+  //         'font-weight': '500'
+  //       }
+  //     }
+  //   },
+  // }
 
 
 }

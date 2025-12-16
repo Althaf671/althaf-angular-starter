@@ -1,8 +1,8 @@
-import { IIconItemsConfig } from "./icon.model";
+// import { IIconItemsConfig } from "./icon.model";
 
 export interface IMenuItemsConfig {
     route?: string;
-    icon: IIconItemsConfig;
+    // icon: IIconItemsConfig;
     text: string;
     action?: () => void;
 };

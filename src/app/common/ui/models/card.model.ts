@@ -1,13 +1,13 @@
-import { IMultiIconConfig } from "./icon.model";
+// import { IMultiIconConfig } from "./icon.model";
 
 export interface IMetricCardConfigItems {
     name: string;
-    mainIcon: IMultiIconConfig;
+    // mainIcon: IMultiIconConfig;
     metricValue: string;
     valueSymbol?: string;
     percentageRate: 'increase' | 'decrease' | 'neutral';
-    detailIcon: IMultiIconConfig;
-    badgeIcon: IMultiIconConfig;
+    // detailIcon: IMultiIconConfig;
+    // badgeIcon: IMultiIconConfig;
     infoText: string;
 }
 

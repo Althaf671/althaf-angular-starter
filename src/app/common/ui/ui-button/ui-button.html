@@ -2,21 +2,11 @@
     <button type="button" [class]="'-' + level" [style]="buttonStyle">
         @switch (variant) {
             @case ("text-icon") {
-                <app-ui-icons  
-                    [provider]="setIcon"
-                    [iconClass]="icon.icons.iconHuge.icon"
-                    [iconItems]="icon.icons.iconLucide"
-                    [iconStyle]="icon.icons.iconHuge.style"
-                />
+                <!-- <app-ui-icons [name]="''" />  -->
                 <p>{{ name }}</p>
             }
             @case ("icon-only") {
-                <app-ui-icons  
-                    [provider]="setIcon"
-                    [iconClass]="icon.icons.iconHuge.icon"
-                    [iconItems]="icon.icons.iconLucide"
-                    [iconStyle]="icon.icons.iconHuge.style"
-                />
+                <!-- <app-ui-icons [name]="''" />  -->
             }
             @case ("text-only") {
                 <p>{{ name }}</p>
@@ -32,21 +22,11 @@
     <button type="submit" [class]="'-' + level" [style]="buttonStyle">
         @switch (variant) {
             @case ("text-icon") {
-                <app-ui-icons  
-                    [provider]="setIcon"
-                    [iconClass]="icon.icons.iconHuge.icon"
-                    [iconItems]="icon.icons.iconLucide"
-                    [iconStyle]="icon.icons.iconHuge.style"
-                />
+                <!-- <app-ui-icons [name]="''" />  -->
                 <p>{{ name }}</p>
             }
             @case ("icon-only") {
-                <app-ui-icons  
-                    [provider]="setIcon"
-                    [iconClass]="icon.icons.iconHuge.icon"
-                    [iconItems]="icon.icons.iconLucide"
-                    [iconStyle]="icon.icons.iconHuge.style"
-                />
+                <!-- <app-ui-icons [name]="''" />  -->
             }
             @case ("text-only") {
                 <p>{{ name }}</p>

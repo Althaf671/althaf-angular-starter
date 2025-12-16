@@ -1,19 +1,31 @@
-@switch (provider) {
+@switch (setProvider) {
     @case ("hugeIcon") {
         <i 
-            [class]="iconClass"
-            [style]="iconStyle"
+            [class]="cdnStyle"
+            [style]="cdnIconName"
         ></i>
     }
     @case ("lucideIcon") {
         <lucide-icon
-            [img]="iconItems.icon"
-            [color]="iconItems.color"
-            [strokeWidth]="iconItems.strokeWidth"
-            [size]="iconItems.size"
+            [img]="bundledIconName"
+            [color]="bundledIconColor"
+            [strokeWidth]="bundledIconStrokeWidth"
+            [size]="bundledIconSize"
         >
         </lucide-icon>  
     }
 }
 
-<!-- Banyak yang perlu direafctor -->
+<!-- NEW -->
+ <!-- @switch (provider) {
+    @case ("hugeIcon") {
+        <i 
+        ></i>
+    }
+    @case ("lucideIcon") {
+        <lucide-icon
+
+        >
+        </lucide-icon>  
+    }
+} -->

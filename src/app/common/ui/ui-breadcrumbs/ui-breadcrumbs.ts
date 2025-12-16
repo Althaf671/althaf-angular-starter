@@ -8,7 +8,6 @@ import {
 } from "@angular/router";
 import { ChevronRight } from 'lucide-angular';
 import { Subscription } from 'rxjs';
-import { IconProviderService } from '../../service/ui/icon-services/iconProviderService';
 
 @Component({
   selector: 'app-ui-breadcrumbs',
@@ -20,10 +19,8 @@ export class UiBreadcrumbs implements OnInit, OnDestroy
 {
   // Dependecy injections
   private router = inject(Router);
-  private iconService = inject(IconProviderService);
 
   // ! Icon properties
-  public setIcon = this.iconService.iconProvider();
   public readonly ChevronRightIcon = {
     icon: ChevronRight,
     strokeWidth: 1.5,

@@ -8,12 +8,7 @@
                     <a [routerLink]="item.route">
                         <span class="prev-route">{{ item.label }}</span>
                     </a>
-                    <app-ui-icons 
-                        [provider]="setIcon"
-                        [iconItems]="ChevronRightIcon"
-                        [iconClass]="'hgi hgi-stroke hgi-arrow-right-01'"
-                        [iconStyle]="{ 'color': 'var(--color-icon)', 'font-size': '21px', 'font-weight': '500' }"
-                    />
+                    <!-- <app-ui-icons [name]="''" />  -->
                 </li>
             } 
             @else 

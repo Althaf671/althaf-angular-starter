@@ -1,8 +1,6 @@
-import { Component, inject, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IButtonStyle } from '../models/button.model';
 import { UiIcons } from "../ui-icons/ui-icons";
-import { IconProviderService } from '../../service/ui/icon-services/iconProviderService';
-import { IMultiIconConfig } from '../models/icon.model';
 
 @Component({
   selector: 'app-ui-button',
@@ -12,8 +10,6 @@ import { IMultiIconConfig } from '../models/icon.model';
 })
 export class UiButton 
 {
-  private iconService = inject(IconProviderService);
-  protected setIcon = this.iconService.iconProvider();
 
   @Input() public type: "button" | "submit" = "button";
 
@@ -30,7 +26,7 @@ export class UiButton
 
   @Input() public name!: string;
 
-  @Input() public icon!: IMultiIconConfig;
+  // @Input() public icon!: IMultiIconConfig;
 
   @Input() public buttonStyle!: IButtonStyle;
 }

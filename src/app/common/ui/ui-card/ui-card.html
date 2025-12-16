@@ -3,31 +3,17 @@
         <header>
             @if (isFirstChild) {
                 <span class="icon-wrapper-dark">
-                    <app-ui-icons 
-                        [provider]="setIcon"
-                        [iconClass]="cardMetricConfig.mainIcon.icons.iconHuge.icon"
-                        [iconStyle]="cardMetricConfig.mainIcon.icons.iconHuge.style"
-                        [iconItems]="cardMetricConfig.mainIcon.icons.iconLucide"
-                    />                               
+                    <!-- <app-ui-icons [name]="''" />                                -->
                 </span>
             } @else {
                 <span class="icon-wrapper">
                     <app-ui-icons 
-                        [provider]="setIcon"
-                        [iconClass]="cardMetricConfig.detailIcon.icons.iconHuge.icon"
-                        [iconStyle]="cardMetricConfig.detailIcon.icons.iconHuge.style"
-                        [iconItems]="cardMetricConfig.detailIcon.icons.iconLucide"
                     />                
                 </span>
             }
             <h3>{{ cardMetricConfig.name }}</h3>
             <span class="info-btn">
-                <app-ui-icons 
-                    provider="hugeIcon"
-                    [iconClass]="cardMetricConfig.detailIcon.icons.iconHuge.icon"
-                    [iconStyle]="cardMetricConfig.detailIcon.icons.iconHuge.style"
-                    [iconItems]="cardMetricConfig.detailIcon.icons.iconLucide"
-                /> 
+                <!-- <app-ui-icons [name]="''" />   -->
             </span>
         </header>
         <div class="body">
@@ -35,7 +21,7 @@
             <output class="metric-value">{{ cardMetricConfig.metricValue }}</output>
         </div>
         <footer>
-            <app-ui-badge [iconItems]="cardBadgeIconItems" />
+            <!-- <app-ui-badge [iconItems]="cardBadgeIconItems" /> -->
             <p>{{ cardMetricConfig.infoText }}</p>
         </footer>
     </article>

@@ -37,12 +37,14 @@ export { UiToggleGroup } from './ui-toggle-group/ui-toggle-group';
 // UI models
 export type { TBreadcrumbsItemsConfig } from './models/breadcrumbs.model';
 export type { IButtonStyle } from './models/button.model';
-export type { 
-    IIconItemsConfig, 
-    IIconStyleConfig, 
-    IIconHugeItemConfig,
-    IIconLucideItemConfig,
-    IMultiIconConfig 
+export type {  
+    IIConStyleDefaultConfig,
+    IIconBundledItemConfig,
+    IIconBundledStyleConfig,
+    IIconCdnItemConfig,
+    IIconCdnStyleConfig,
+    IMultiProviderIconConfig,
+    IMultiProviderIconStyleConfig,
 } from './models/icon.model';
 export type { IMenuItemsConfig } from './models/menu.model';
 export type { IModalItemsConfig } from './models/modal.model';

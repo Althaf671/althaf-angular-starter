@@ -31,19 +31,19 @@
                     <app-ui-card 
                         [isFirstChild]="true" 
                         [cardMetricConfig]="totalProfit" 
-                        [cardBadgeIconItems]="totalProfit.badgeIcon" 
+                        
                     />
                     <app-ui-card 
                         [cardMetricConfig]="totalSuccessTransaction" 
-                        [cardBadgeIconItems]="totalSuccessTransaction.badgeIcon" 
+                        
                     />
                     <app-ui-card 
                         [cardMetricConfig]="totalUsers" 
-                        [cardBadgeIconItems]="totalUsers.badgeIcon" 
+                        [
                     />
                     <app-ui-card 
                         [cardMetricConfig]="totalActiveUsers" 
-                        [cardBadgeIconItems]="totalActiveUsers.badgeIcon" 
+                        [
                     />
                 </section>
 
@@ -67,28 +67,28 @@
                                 />
                                 <app-ui-button
                                     [type]="'button'" 
-                                    [icon]="btnDefaultIcon"
+                                    
                                     [level]="'info'"
                                     [variant]="'text-icon'"
                                     [name]="'Default'"
                                 />
                                <app-ui-button
                                     [type]="'submit'" 
-                                    [icon]="btnSubmitIcon"
+                                    
                                     [level]="'success'"
                                     [variant]="'text-icon'"
                                     [name]="'Submit'"
                                 />
                                <app-ui-button
                                     [type]="'submit'" 
-                                    [icon]="btnDangerIcon"
+                                    
                                     [level]="'danger'"
                                     [variant]="'text-icon'"
                                     [name]="'Delete'"
                                 />
                                <app-ui-button
                                     [type]="'submit'" 
-                                    [icon]="btnWarnIcon"
+                                    
                                     [level]="'warn'"
                                     [variant]="'text-icon'"
                                     [name]="'Warning'"
@@ -129,6 +129,12 @@
                         </div>
                         <div class="summary-container">
                             <div class="header">Overview</div>
+                            <app-ui-icons 
+                                [name]="''"
+                                [overrideSize]="'lg'"
+                                [overrideStrokeWidth]="'sm'"
+                                [overrideColor]="'red'"
+                            />
                         </div>
                     </div>
                 </section>

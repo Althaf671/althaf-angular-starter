@@ -4,7 +4,6 @@ import { AppWindow, DoorOpen, } from 'lucide-angular';
 import { RouterLink, RouterLinkActive } from "@angular/router";
 import { SidebarService } from '../../service/layout/sidebar.service';
 import { TSidebarMenuItemsConfig } from '@/layout/index';
-import { IconProviderService } from '../../service/ui/icon-services/iconProviderService';
 
 @Component({
   selector: 'app-sidebar',
@@ -14,7 +13,6 @@ import { IconProviderService } from '../../service/ui/icon-services/iconProvider
 })
 export class Sidebar 
 {
-  private iconService = inject(IconProviderService);
   protected sidebar = inject(SidebarService);
 
 
@@ -31,7 +29,6 @@ export class Sidebar
     color: 'white', 
     size: 24
   };
-  protected setIcon = this.iconService.iconProvider();
 
   
   protected toggle(): void 

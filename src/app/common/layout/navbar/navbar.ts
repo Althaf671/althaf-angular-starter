@@ -1,8 +1,6 @@
-import { Component, inject, Input } from '@angular/core';
-import { IIconItemsConfig, IMenuItemsConfig, UiIcons, UiMenu } from "../../ui";
+import { Component, Input } from '@angular/core';
+import { IMenuItemsConfig, UiIcons, UiMenu } from "../../ui";
 import { INavbarItemsConfig } from '../models/navbar.model';
-import { IconProviderService } from '../../service/ui/icon-services/iconProviderService';
-import { Bell } from 'lucide-angular';
 import { RouterLink, RouterLinkActive } from "@angular/router";
 
 @Component({
@@ -18,16 +16,6 @@ import { RouterLink, RouterLinkActive } from "@angular/router";
 })
 export class Navbar 
 {
-  private iconService = inject(IconProviderService);
-  protected setIcon = this.iconService.iconProvider();
-
-  // Notification and menu dropdown config
-  protected readonly NotificationIcon: IIconItemsConfig = {
-    icon: Bell,
-    size: 1.5,
-    strokeWidth: 1.5,
-    color: 'var(--color-icon)'
-  }
 
   @Input() public navbarItem!: INavbarItemsConfig[];
 

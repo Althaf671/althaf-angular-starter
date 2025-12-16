@@ -9,23 +9,14 @@
                             [routerLinkActive]="'active-link'"
                             [routerLinkActiveOptions]="{ exact: true }"
                         >
-                            <app-ui-icons 
-                                [provider]="setIcon"
-                                [iconItems]="item.iconLucide"
-                                [iconStyle]="item.iconHuge.style"
-                                [iconClass]="item.iconHuge.icon"
-                            />
+                            <!-- <app-ui-icons [name]="''" />  -->
                             <span>{{ item.name }}</span>
                         </a>
                     </li>
                 }
             </ul>
             <div class="notification-and-menu-container">
-                <app-ui-icons 
-                    [provider]="setIcon"
-                    [iconItems]="NotificationIcon"
-                    [iconClass]="'hgi hgi-stroke hgi-notification-01'"
-                />
+                <!-- <app-ui-icons [name]="''" />  -->
                 <app-ui-menu [menuItems]="menuItems" />
             </div>
         </div>
