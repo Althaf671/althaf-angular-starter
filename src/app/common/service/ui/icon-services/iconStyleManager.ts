@@ -1,4 +1,13 @@
-// import { IIConStyleDefaultConfig, IMultiProviderIconStyleConfig } from '@/app/common/ui/models/icon.model';
+import { ICON_STYLE_DEFAULT } from '@/app/assets/icons/common/styles/icon.style.default';
+import { 
+  TIconSizeToken, 
+  TIconStrokeWidthToken } from '@/app/common/ui';
+import { 
+  BUNDLED_ICON_SIZE_TOKEN_VALUE, 
+  BUNDLED_ICON_STROKE_WIDTH_TOKEN_VALUE, 
+  CDN_ICON_SIZE_TOKEN_VALUE,
+  CDN_ICON_STROKEWIDTH_TOKEN_VALUE
+} from '@/app/common/ui/models/icon.model';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -6,40 +15,49 @@ import { Injectable } from '@angular/core';
 })
 export class IconStyleManager 
 {
-
-  // Tempat manage override default icon style dengan direct input di parent template
-  // Menerima input dari app-ui-icon
-  // Overide ICON_STYLE_DEFAULT
-  // private overrideStyles: IMultiProviderIconStyleConfig = {};
-
-  public convertTokens(
-    overrideSize: string,
-    overrideStrokeWidth: string,
+  
+  public applyOverrideStyles(
+    overrideSize: TIconSizeToken,
+    overrideStrokeWidth: TIconStrokeWidthToken,
     overrideColor: string,
-  ): void
+  ): unknown
+  {
+    const applyFinalSize = overrideSize;
+    const applyFinalStrokeWidth = overrideStrokeWidth;
+    const applyFinalColor = overrideColor;
+
+
+    return 
+  }
+
+  // This method will convert tokens into number(for bundled) or string(for CDN) icon
+  public convertTokens(
+    overrideSize: TIconSizeToken,
+    overrideStrokeWidth: TIconStrokeWidthToken,
+    overrideColor: string,
+  ): unknown
   {
     // This method will receive 3 vars
     console.log("Overrided size is: " + overrideSize); // it should return token 'sm' | 'md' and other
-    console.log("Overrided size is: " + overrideStrokeWidth); // it should the same as above
-    console.log("Overrided size is: " + overrideColor); // it should return string color
+    console.log("Overrided stroke width is: " + overrideStrokeWidth); // it should the same as above
+    console.log("Overrided color is: " + overrideColor); // it should return string color
+
+    const overrideStyles = {
+      bundledIcon: {
+        size: BUNDLED_ICON_SIZE_TOKEN_VALUE[overrideSize],
+        strokeWidth: BUNDLED_ICON_STROKE_WIDTH_TOKEN_VALUE[overrideStrokeWidth],
+        color: overrideColor
+      },
+      cdnIcon: {
+        'font-size': CDN_ICON_SIZE_TOKEN_VALUE[overrideSize],
+        'font-weight': CDN_ICON_STROKEWIDTH_TOKEN_VALUE[overrideStrokeWidth],
+        color: overrideColor
+      }
+    } as const
+
+    console.debug("Overrided styles is: " + overrideColor); // it should return the all override actuall values
+
+    return overrideStyles;
   }
 
-  // ohh keren, tapi aku juga punya transform styles nahh gini, convert token method kan convert token 
-  // jadi number nah karena ada bundled dan cdn icons yg punya different approach buat styling, e.g lucide = size; number, 
-  // huge/other cdn = style: font-size number...jadi token akan ditukar jadi 2 atau 20px so wdyt? atauuu, method convert token itu 
-  // convert token (eg 'sm') => 2 & 20px..? - option 2.
-
-  // applyOverrides()
-  // getDefaultStyles()
-
-  // public ngOnInit(iconStyle: IMultiProviderIconStyleConfig): void 
-  // {
-  
-  // }
-
-// 'thin'    → strokeWidth: 1   | font-weight: 300
-// 'regular' → strokeWidth: 1.5 | font-weight: 400
-// 'medium'  → strokeWidth: 2   | font-weight: 500
-// 'bold'    → strokeWidth: 2.5 | font-weight: 600
-// 'bolder'  → strokeWidth: 3   | font-weight: 700
 }

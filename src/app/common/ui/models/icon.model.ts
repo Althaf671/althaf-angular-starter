@@ -58,37 +58,39 @@ export interface IIConStyleDefaultConfig {
 }
 
 // Icon size token config
-// export interface IIconSizeTokenConfig {
-//     xs: number
-//     sm: number;
-//     md: number;
-//     lg: number;
-// }
-
-// Icon size token value
-// export const SIZE_TOKEN: IIconSizeTokenConfig = {
-//     xs: 16,
-//     sm: 20,
-//     md: 24,
-//     lg: 28
-// }
-
-// Icon stroke width token config
-// export interface IIConStrokeWidthTokenConfig {
-//     thin: number;
-//     medium: number;
-//     bold: number;
-//     bolder: number;
-// }
-
-// Icon stroke width token value
-// export const STROKE_WIDTH_TOKEN: IIConStrokeWidthTokenConfig = {
-//     thin: 1,
-//     medium: 1.5,
-//     bold: 2,
-//     bolder: 2.5
-// }
-
 export type TIconSizeToken = 'xs' | 'sm' | 'md' | 'lg';
 
+// Icon stroke width token config
 export type TIconStrokeWidthToken = TIconSizeToken;
+
+// Bundled icon size token value
+export const BUNDLED_ICON_SIZE_TOKEN_VALUE = {
+    xs: 16,
+    sm: 20,
+    md: 24,
+    lg: 28,
+} as const
+
+// Bundled icon stroke width token value
+export const BUNDLED_ICON_STROKE_WIDTH_TOKEN_VALUE = {
+    xs: 1,
+    sm: 1.5,
+    md: 2,
+    lg: 2.5,
+} as const
+
+// CDN icon size token value
+export const CDN_ICON_SIZE_TOKEN_VALUE = {
+    xs: '16px',
+    sm: '20px',
+    md: '24px',
+    lg: '28px'
+} as const
+
+// CDN icon stroke width token value
+export const CDN_ICON_STROKEWIDTH_TOKEN_VALUE = {
+    xs: 300,
+    sm: 400,
+    md: 500,
+    lg: 600,
+} as const

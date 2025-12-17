@@ -1,3 +1,4 @@
+import { ICON_PROVIDERS } from '@/app/common/ui/models/icon.model';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,26 +6,9 @@ import { Injectable } from '@angular/core';
 })
 export class IconProviderService 
 {
+  private getProvider = ICON_PROVIDERS[1]; 
 
-  // Provider manager
-  // toggle controller = var: string
-  // Inject all parent that called app-icon with 
-  // set [provider]="toggle logic with tenary (?) operator" to all app-icon tag
-  // phospor - lucide - huge - font awosme - ionic - box icons - iconoir
-  // style: outline - and more
-
-  // private setProvider(): void 
-  // {
-
-  // }
-
-  // public iconProvider(): string
-  // {
-  //   console.log("Icon provider = " + this.provider);
-  //   return this.provider;
-  // }
-
-  private provider!: string;
+  private provider = this.getProvider;
   public setProvider(): string
   {
     console.log("Current provider is: " + this.provider);
