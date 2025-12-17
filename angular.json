@@ -103,6 +103,7 @@
     "schematicCollections": [
       "angular-eslint",
       "angular-eslint"
-    ]
+    ],
+    "analytics": "e1f961bf-8cf7-4c4d-af51-16eb25fc0669"
   }
 }
