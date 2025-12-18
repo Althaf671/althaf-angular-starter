@@ -1,4 +1,6 @@
-export const ICON_STYLE_DEFAULT = {
+import { IIConStyleDefaultConfig } from "@/app/common/ui"
+
+export const ICON_STYLE_DEFAULT: IIConStyleDefaultConfig = {
     colorDefault: 'var(--color-icon)',
     hugeStyleDefault: { 'font-size': '24px', 'font-weight': '500' },
     lucideStyleDefault: { size: 24, strokeWidth: 1.5, }

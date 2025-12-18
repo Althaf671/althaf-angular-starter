@@ -38,11 +38,13 @@ export { UiToggleGroup } from './ui-toggle-group/ui-toggle-group';
 export type { TBreadcrumbsItemsConfig } from './models/breadcrumbs.model';
 export type { IButtonStyle } from './models/button.model';
 export type {  
+    ICON_PROVIDERS,
     IIConStyleDefaultConfig,
     IIconBundledItemConfig,
     IIconBundledStyleConfig,
     IIconCdnItemConfig,
     IIconCdnStyleConfig,
+    IResolvedIconStyle,
     IMultiProviderIconConfig,
     IMultiProviderIconStyleConfig,
     TIconSizeToken,

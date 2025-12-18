@@ -1,9 +1,9 @@
-import { Component, inject, Input } from '@angular/core';
-import { LucideAngularModule, LucideIconData } from 'lucide-angular';
+import { Component, inject, Input, OnChanges } from '@angular/core';
+import { LucideAngularModule } from 'lucide-angular';
 import { IconStyleManager } from '../../service/ui/icon-services/iconStyleManager';
 import { IconProviderService } from '../../service/ui/icon-services/iconProviderService';
-import { TIconSizeToken, TIconStrokeWidthToken } from '../models/icon.model';
-import { SHORTENED_BUNDLED_STYLE_CONFIG, SHORTENED_CDN_STYLE_CONFIG } from '@/app/assets/icons/common/styles/shortened.style.default';
+import { IResolvedIconStyle, TIconSizeToken, TIconStrokeWidthToken } from '../models/icon.model';
+import { IconCatalogService } from '../../service/ui/icon-services/iconCatalogService';
 
 
 @Component({
@@ -12,7 +12,7 @@ import { SHORTENED_BUNDLED_STYLE_CONFIG, SHORTENED_CDN_STYLE_CONFIG } from '@/ap
   templateUrl: './ui-icons.html',
   styleUrl: './ui-icons.scss',
 })
-export class UiIcons 
+export class UiIcons implements OnChanges
 {
   // Set icon provider
   private iconProvider = inject(IconProviderService);
@@ -20,32 +20,37 @@ export class UiIcons
 
   // Input icon name
   @Input() public name!: string;
+  
+  // Search for available icon in catalog
+  private catalogService = inject(IconCatalogService);
+
+  // Bundled icon props to bind
+  protected bundledIconName = "";
+  protected bundledIconColor = "";
+  protected bundledIconStrokeWidth = "";
+  protected bundledIconSize = "";
+
+  // CDN icon to props bind
+  protected cdnIconName = "";
+  protected cdnStyle = "";
 
   // Overide styles
   @Input() public overrideSize: TIconSizeToken = 'md';
 
   @Input() public overrideStrokeWidth: TIconStrokeWidthToken = 'md';
 
-  @Input() public overrideColor!: string;
+  @Input() public overrideColor = 'var(--color-icon)';
 
   // Set override styles
   private styleManager = inject(IconStyleManager);
-  private setOverrideStyles = this.styleManager.convertTokens(
-    this.overrideSize,
-    this.overrideStrokeWidth,
-    this.overrideColor
-  )
-
-  // Set icon names
-  protected bundledIconName!: LucideIconData;
-  protected cdnIconName!: string;
-
-  // Set bundled icon styles 
-  protected bundledIconSize = SHORTENED_BUNDLED_STYLE_CONFIG.size;
-  protected bundledIconStrokeWidth = SHORTENED_BUNDLED_STYLE_CONFIG.strokeWidth;
-  protected bundledIconColor = SHORTENED_BUNDLED_STYLE_CONFIG.color;
-
-  // Set cdn icon styles
-  protected cdnStyle = SHORTENED_CDN_STYLE_CONFIG;
+  private resolvedStyles!: IResolvedIconStyle; 
+  public ngOnChanges(): void 
+  {
+    this.resolvedStyles = this.styleManager.applyOverrideStyles(
+      this.overrideSize,
+      this.overrideStrokeWidth,
+      this.overrideColor
+    )
+  } 
   
 }

@@ -1,10 +1,4 @@
 @switch (setProvider) {
-    @case ("hugeIcon") {
-        <i 
-            [class]="cdnStyle"
-            [style]="cdnIconName"
-        ></i>
-    }
     @case ("lucideIcon") {
         <lucide-icon
             [img]="bundledIconName"
@@ -13,6 +7,12 @@
             [size]="bundledIconSize"
         >
         </lucide-icon>  
+    }
+    @case ("hugeIcon") {
+        <i 
+            [class]="cdnIconName"
+            [style]="cdnStyle"
+        ></i>
     }
 }
 

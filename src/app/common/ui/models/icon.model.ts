@@ -21,9 +21,9 @@ export type IIconBundledStyleConfig = Omit<IIconBundledItemConfig, 'icon'>;
 // CDN icon main config
 export interface IIconCdnItemConfig {
     icon: string;
-    'font-size'?: string;
-    'color'?: string;
-    'font-weight'?: string;
+    'font-size': string;
+    'color': string;
+    'font-weight': string;
 }
 // Cdn icon style config
 export type IIconCdnStyleConfig = Omit<IIconCdnItemConfig, 'icon'>;
@@ -52,11 +52,20 @@ export interface IMultiProviderIconStyleConfig {
 
 // Icon style default config
 export interface IIConStyleDefaultConfig {
-    color: string;
-    strokeWidth: string;
-    size: string;
+  colorDefault: string;
+  lucideStyleDefault: {
+    size: number;
+    strokeWidth: number;
+  };
+  hugeStyleDefault: {
+    'font-size': string;
+    'font-weight': string;
+  };
 }
+// Icon resolved icon style
+export type IResolvedIconStyle = IIConStyleDefaultConfig;
 
+//====== Icon tokens value ======//
 // Icon size token config
 export type TIconSizeToken = 'xs' | 'sm' | 'md' | 'lg';
 
@@ -89,8 +98,8 @@ export const CDN_ICON_SIZE_TOKEN_VALUE = {
 
 // CDN icon stroke width token value
 export const CDN_ICON_STROKEWIDTH_TOKEN_VALUE = {
-    xs: 300,
-    sm: 400,
-    md: 500,
-    lg: 600,
+    xs: '300',
+    sm: '400',
+    md: '500',
+    lg: '600',
 } as const
