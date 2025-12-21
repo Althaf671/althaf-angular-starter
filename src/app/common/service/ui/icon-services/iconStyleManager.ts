@@ -1,15 +1,16 @@
-import { ICON_STYLE_DEFAULT } from '@/app/assets/icons/common/styles/icon.style.default';
+import { ICON_STYLE_DEFAULT } from '@/assets/icons/common/index';
 import { 
   TIconSizeToken, 
-  TIconStrokeWidthToken } from '@/app/common/ui';
+  TIconStrokeWidthToken,
+  IMultiProviderIconStyleConfig,
+  IResolvedIconStyle
+} from '@/ui/index';
 import { 
   BUNDLED_ICON_SIZE_TOKEN_VALUE, 
   BUNDLED_ICON_STROKE_WIDTH_TOKEN_VALUE, 
   CDN_ICON_SIZE_TOKEN_VALUE,
   CDN_ICON_STROKEWIDTH_TOKEN_VALUE,
-  IMultiProviderIconStyleConfig,
-  IResolvedIconStyle
-} from '@/app/common/ui/models/icon.model';
+} from '@/assets/icons/common/index';
 import { Injectable } from '@angular/core';
 
 @Injectable({

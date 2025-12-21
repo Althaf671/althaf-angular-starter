@@ -8,6 +8,8 @@
       "@/*": ["*"],
       "@/layout/*": ["app/common/layout/*"],
       "@/ui/*": ["app/common/ui/*"],
+      "@/service/ui/*": ["app/common/service/ui/*"],
+      "@/assets/*": ["app/assets/*"]
     },
     "strict": true,
     "noImplicitOverride": true,

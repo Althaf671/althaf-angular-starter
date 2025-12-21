@@ -10,10 +10,12 @@ import {
     useHugeStyleWithAccentColor, 
     useLucideStyleWithAccentColor 
 } from "../../common/helper/useAccentStyle";
+import { ICON_METADATA_GLOBAL } from "../../common/models/icon.metadata.model";
 
 export const GLOBAL_ICON_CONFIG: IIconMapConfig[] = [
     {
         name: 'info-icon',
+        metadata: { portal :"system-admin", page: ICON_METADATA_GLOBAL },
         provider: {
             bundledIcon: { 
                 icon: Info, 
@@ -27,6 +29,7 @@ export const GLOBAL_ICON_CONFIG: IIconMapConfig[] = [
     },
     {
         name: 'warn-icon',
+        metadata: { portal :"system-admin", page: ICON_METADATA_GLOBAL },
         provider: {
             bundledIcon: { 
                 icon: CircleAlert, 
@@ -40,6 +43,7 @@ export const GLOBAL_ICON_CONFIG: IIconMapConfig[] = [
     },
     {
         name: 'danger-icon',
+        metadata: { portal :"system-admin", page: ICON_METADATA_GLOBAL },
         provider: {
             bundledIcon: { 
                 icon: TriangleAlert, 
@@ -53,6 +57,7 @@ export const GLOBAL_ICON_CONFIG: IIconMapConfig[] = [
     },
     {
         name: 'success-icon',
+        metadata: { portal :"system-admin", page: ICON_METADATA_GLOBAL },
         provider: {
             bundledIcon: { 
                 icon: Check, 

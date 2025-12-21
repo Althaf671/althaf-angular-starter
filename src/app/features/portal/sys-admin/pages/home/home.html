@@ -39,11 +39,11 @@
                     />
                     <app-ui-card 
                         [cardMetricConfig]="totalUsers" 
-                        [
+                        
                     />
                     <app-ui-card 
                         [cardMetricConfig]="totalActiveUsers" 
-                        [
+                        
                     />
                 </section>
 
@@ -51,6 +51,9 @@
                 <section class="statistic">
                     <div class="title">
                         <h3>Overall Growth <span>+16%</span> </h3>
+                        <app-ui-icons 
+                            [name]="'metric-total-profit'"
+                        />
                         <div class="filter-container">
                             <div class="toggle-timeline">
                                 <app-ui-button
@@ -129,12 +132,6 @@
                         </div>
                         <div class="summary-container">
                             <div class="header">Overview</div>
-                            <app-ui-icons 
-                                [name]="''"
-                                [overrideSize]="'lg'"
-                                [overrideStrokeWidth]="'sm'"
-                                [overrideColor]="'red'"
-                            />
                         </div>
                     </div>
                 </section>

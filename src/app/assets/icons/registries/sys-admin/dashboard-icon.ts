@@ -8,15 +8,17 @@ import {
     UserCheck, 
     UserRound 
 } from "lucide-angular";
-import { IIconMapConfig } from "../common/models/icon.map.model";
+import { IIconMapConfig } from "../../common/models/icon.map.model";
 import { 
     SHORTENED_CDN_STYLE_CONFIG, 
     SHORTENED_BUNDLED_STYLE_CONFIG 
-} from "../common/styles/shortened.style.default";
+} from "../../common/styles/shortened.style.default";
+import { ICON_METADATA_PORTAL } from "../../common/models/icon.metadata.model";
 
 export const DASHBOARD_OVERVIEW_ICONS_CONFIG: IIconMapConfig[] = [
     {
         name: 'metric-total-profit',
+        metadata: { portal :"system-admin", page: ICON_METADATA_PORTAL["system-admin"][0] },
         provider: {
             bundledIcon: { icon: CircleDollarSign, style:SHORTENED_BUNDLED_STYLE_CONFIG },
             cdnIcon: { icon: 'hgi hgi-stroke hgi-dollar-02', style: SHORTENED_CDN_STYLE_CONFIG },
@@ -24,6 +26,7 @@ export const DASHBOARD_OVERVIEW_ICONS_CONFIG: IIconMapConfig[] = [
     },
     {
         name: 'metric-total-sales',
+        metadata: { portal :"system-admin", page: ICON_METADATA_PORTAL["system-admin"][0] },
         provider: {
             bundledIcon: { icon: Box, style:SHORTENED_BUNDLED_STYLE_CONFIG },
             cdnIcon: { icon: 'hgi hgi-stroke hgi-package-delivered', style: SHORTENED_CDN_STYLE_CONFIG }
@@ -31,6 +34,7 @@ export const DASHBOARD_OVERVIEW_ICONS_CONFIG: IIconMapConfig[] = [
     },
     {
         name: 'metric-total-client',
+        metadata: { portal :"system-admin", page: ICON_METADATA_PORTAL["system-admin"][0] },
         provider: {
             bundledIcon: { icon: UserRound, style:SHORTENED_BUNDLED_STYLE_CONFIG },
             cdnIcon: { icon: 'hgi hgi-stroke hgi-user-group', style: SHORTENED_CDN_STYLE_CONFIG }
@@ -38,6 +42,7 @@ export const DASHBOARD_OVERVIEW_ICONS_CONFIG: IIconMapConfig[] = [
     },
     {
         name: 'metric-total-employee',
+        metadata: { portal :"system-admin", page: ICON_METADATA_PORTAL["system-admin"][0] },
         provider: {
             bundledIcon: { icon: UserCheck, style:SHORTENED_BUNDLED_STYLE_CONFIG },
             cdnIcon: { icon: 'hgi hgi-stroke hgi-id', style: SHORTENED_CDN_STYLE_CONFIG }
@@ -45,6 +50,7 @@ export const DASHBOARD_OVERVIEW_ICONS_CONFIG: IIconMapConfig[] = [
     },
     {
         name: 'chart-bar-icon',
+        metadata: { portal :"system-admin", page: ICON_METADATA_PORTAL["system-admin"][0] },
         provider: {
             bundledIcon: { icon: ChartArea, style:SHORTENED_BUNDLED_STYLE_CONFIG },
             cdnIcon: { icon: 'hgi hgi-stroke hgi-waterfall-up-01', style: SHORTENED_CDN_STYLE_CONFIG }
@@ -52,6 +58,7 @@ export const DASHBOARD_OVERVIEW_ICONS_CONFIG: IIconMapConfig[] = [
     },
     {
         name: 'chart-pie-icon',
+        metadata: { portal :"system-admin", page: ICON_METADATA_PORTAL["system-admin"][0] },
         provider: {
             bundledIcon: { icon: ChartPie, style:SHORTENED_BUNDLED_STYLE_CONFIG },
             cdnIcon: { icon: 'hgi hgi-stroke hgi-pie-chart-09', style: SHORTENED_CDN_STYLE_CONFIG }
@@ -59,6 +66,7 @@ export const DASHBOARD_OVERVIEW_ICONS_CONFIG: IIconMapConfig[] = [
     },
     {
         name: 'summary-header-icon',
+        metadata: { portal :"system-admin", page: ICON_METADATA_PORTAL["system-admin"][0] },
         provider: {
             bundledIcon: { icon: Book, style:SHORTENED_BUNDLED_STYLE_CONFIG },
             cdnIcon: { icon: 'hgi hgi-stroke hgi-document-validation', style: SHORTENED_CDN_STYLE_CONFIG }
@@ -66,6 +74,7 @@ export const DASHBOARD_OVERVIEW_ICONS_CONFIG: IIconMapConfig[] = [
     },
     {
         name: 'top-employee-header-icon',
+        metadata: { portal :"system-admin", page: ICON_METADATA_PORTAL["system-admin"][0] },
         provider: {
             bundledIcon: { icon: Spotlight, style:SHORTENED_BUNDLED_STYLE_CONFIG },
             cdnIcon: { icon: 'hgi hgi-stroke hgi-nerd', style: SHORTENED_CDN_STYLE_CONFIG }

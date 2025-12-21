@@ -30,7 +30,7 @@ import {
   totalUsers 
 } from './common/dashboard-data/metric.data';
 import { BasePageComponent } from '../../common/base-page-component';
-import { AppWindow } from 'lucide-angular';
+// import { AppWindow } from 'lucide-angular';
 import { Navbar, Header } from "@/app/common/layout";
 
 
@@ -68,12 +68,12 @@ export class Home extends BasePageComponent implements OnInit, OnDestroy
   // Dependecy injections
   private routerState = inject(RouterStateService);
 
-  protected readonly MenuIcons = { 
-    icon: AppWindow, 
-    strokeWidth: 1.5,
-    color: 'var(--color-icon)', 
-    size: 24
-  };
+  // protected readonly MenuIcons = { 
+  //   icon: AppWindow, 
+  //   strokeWidth: 1.5,
+  //   color: 'var(--color-icon)', 
+  //   size: 24
+  // };
 
 
   //========== METHOD HOME CONTENT VISIBILITY ==========//

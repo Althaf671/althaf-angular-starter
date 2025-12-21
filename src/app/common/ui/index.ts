@@ -48,7 +48,7 @@ export type {
     IMultiProviderIconConfig,
     IMultiProviderIconStyleConfig,
     TIconSizeToken,
-    TIconStrokeWidthToken
+    TIconStrokeWidthToken,
 } from './models/icon.model';
 export type { IMenuItemsConfig } from './models/menu.model';
 export type { IModalItemsConfig } from './models/modal.model';

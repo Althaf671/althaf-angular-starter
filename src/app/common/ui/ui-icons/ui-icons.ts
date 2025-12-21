@@ -4,6 +4,7 @@ import { IconStyleManager } from '../../service/ui/icon-services/iconStyleManage
 import { IconProviderService } from '../../service/ui/icon-services/iconProviderService';
 import { IResolvedIconStyle, TIconSizeToken, TIconStrokeWidthToken } from '../models/icon.model';
 import { IconCatalogService } from '../../service/ui/icon-services/iconCatalogService';
+import { SYS_ADMIN_ICON_REGISTRY } from '@/app/assets/icons/registries';
 
 
 @Component({
@@ -23,16 +24,22 @@ export class UiIcons implements OnChanges
   
   // Search for available icon in catalog
   private catalogService = inject(IconCatalogService);
+  private iconConfig = this.catalogService.getIconByName(this.name);
 
   // Bundled icon props to bind
-  protected bundledIconName = "";
-  protected bundledIconColor = "";
-  protected bundledIconStrokeWidth = "";
-  protected bundledIconSize = "";
+  protected bundledIconImage = this.iconConfig?.provider.bundledIcon.icon;
+  protected bundledIconColor = this.iconConfig?.provider.bundledIcon.style.color;
+  protected bundledIconStrokeWidth = this.iconConfig?.provider.bundledIcon.style.strokeWidth;
+  protected bundledIconSize = this.iconConfig?.provider.bundledIcon.style.size;
 
   // CDN icon to props bind
-  protected cdnIconName = "";
-  protected cdnStyle = "";
+  protected cdnIconName = this.iconConfig?.provider.cdnIcon.icon;
+  protected cdnStyle = this.iconConfig?.provider.cdnIcon.style;
+
+  public ngOnInit(): void 
+  {
+    this.catalogService.registry(SYS_ADMIN_ICON_REGISTRY.flat())
+  }
 
   // Overide styles
   @Input() public overrideSize: TIconSizeToken = 'md';
